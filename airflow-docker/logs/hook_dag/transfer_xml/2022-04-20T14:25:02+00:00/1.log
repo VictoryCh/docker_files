@@ -1,0 +1,27 @@
+[2022-04-20 14:31:42,518] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: hook_dag.transfer_xml scheduled__2022-04-20T14:25:02+00:00 [queued]>
+[2022-04-20 14:31:42,533] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: hook_dag.transfer_xml scheduled__2022-04-20T14:25:02+00:00 [queued]>
+[2022-04-20 14:31:42,533] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-20 14:31:42,533] {taskinstance.py:1244} INFO - Starting attempt 1 of 2
+[2022-04-20 14:31:42,533] {taskinstance.py:1245} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-20 14:31:42,551] {taskinstance.py:1264} INFO - Executing <Task(Postgres2File): transfer_xml> on 2022-04-20 14:25:02+00:00
+[2022-04-20 14:31:42,576] {standard_task_runner.py:52} INFO - Started process 19253 to run task
+[2022-04-20 14:31:42,586] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'hook_dag', 'transfer_xml', 'scheduled__2022-04-20T14:25:02+00:00', '--job-id', '658', '--raw', '--subdir', 'DAGS_FOLDER/hook_dag.py', '--cfg-path', '/tmp/tmplrvkckk0', '--error-file', '/tmp/tmpq5shzykd']
+[2022-04-20 14:31:42,587] {standard_task_runner.py:77} INFO - Job 658: Subtask transfer_xml
+[2022-04-20 14:31:42,676] {logging_mixin.py:109} INFO - Running <TaskInstance: hook_dag.transfer_xml scheduled__2022-04-20T14:25:02+00:00 [running]> on host 22e04adb6bfa
+[2022-04-20 14:31:42,795] {taskinstance.py:1431} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=hook_dag
+AIRFLOW_CTX_TASK_ID=transfer_xml
+AIRFLOW_CTX_EXECUTION_DATE=2022-04-20T14:25:02+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-04-20T14:25:02+00:00
+[2022-04-20 14:31:42,809] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2022-04-20 14:31:42,909] {taskinstance.py:1282} INFO - Marking task as SUCCESS. dag_id=hook_dag, task_id=transfer_xml, execution_date=20220420T142502, start_date=20220420T143142, end_date=20220420T143142
+[2022-04-20 14:31:42,975] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-04-20 14:31:43,031] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2022-04-20 14:31:43,038] {dbapi.py:225} INFO - Running statement: update list_flow_log
+                set t_end=NOW(), status=2, comment = '*Task*: transfer_xml success'
+                where id = 43;, parameters: None
+[2022-04-20 14:31:43,039] {dbapi.py:233} INFO - Rows affected: 1
+[2022-04-20 14:31:43,254] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check

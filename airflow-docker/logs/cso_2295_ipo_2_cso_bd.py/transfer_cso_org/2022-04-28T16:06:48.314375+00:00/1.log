@@ -1,0 +1,86 @@
+[2022-04-28 16:06:58,769] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: cso_2295_ipo_2_cso_bd.py.transfer_cso_org manual__2022-04-28T16:06:48.314375+00:00 [queued]>
+[2022-04-28 16:06:58,779] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: cso_2295_ipo_2_cso_bd.py.transfer_cso_org manual__2022-04-28T16:06:48.314375+00:00 [queued]>
+[2022-04-28 16:06:58,779] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-28 16:06:58,779] {taskinstance.py:1244} INFO - Starting attempt 1 of 1
+[2022-04-28 16:06:58,779] {taskinstance.py:1245} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-28 16:06:58,787] {taskinstance.py:1264} INFO - Executing <Task(Postgres2Postgres): transfer_cso_org> on 2022-04-28 16:06:48.314375+00:00
+[2022-04-28 16:06:58,792] {standard_task_runner.py:52} INFO - Started process 22667 to run task
+[2022-04-28 16:06:58,794] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'cso_2295_ipo_2_cso_bd.py', 'transfer_cso_org', 'manual__2022-04-28T16:06:48.314375+00:00', '--job-id', '1428', '--raw', '--subdir', 'DAGS_FOLDER/cso_2295/cso_2295_ipo_2_cso_bd.py', '--cfg-path', '/tmp/tmpbm_z360b', '--error-file', '/tmp/tmppkk9rx5k']
+[2022-04-28 16:06:58,795] {standard_task_runner.py:77} INFO - Job 1428: Subtask transfer_cso_org
+[2022-04-28 16:06:58,840] {logging_mixin.py:109} INFO - Running <TaskInstance: cso_2295_ipo_2_cso_bd.py.transfer_cso_org manual__2022-04-28T16:06:48.314375+00:00 [running]> on host 0936e4a14e76
+[2022-04-28 16:06:58,919] {taskinstance.py:1431} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=cso_2295_ipo_2_cso_bd.py
+AIRFLOW_CTX_TASK_ID=transfer_cso_org
+AIRFLOW_CTX_EXECUTION_DATE=2022-04-28T16:06:48.314375+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-04-28T16:06:48.314375+00:00
+[2022-04-28 16:06:58,936] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2022-04-28 16:06:58,946] {Postgres2Postgres.py:35} INFO - Source id connection: postgres_host
+[2022-04-28 16:06:58,946] {Postgres2Postgres.py:36} INFO - Executing sql = select to_char(now(), 'yyyymmdd') as "date",to_char(now(), 'hh24:mi:ss') as "time", WERKS, 
+                BTRTL, objid as ORGEH, LNAME, orgname as SNAME, shortname as ABBRV, OPRNT, chperoe as CHPER, 
+                orglow as ZTYPE, orgendda as SENDD from organizational_unit_actual_f;
+[2022-04-28 16:06:58,974] {base.py:79} INFO - Using connection to: id: postgres_host. Host: 172.17.0.1, Port: 5432, Schema: postgres, Login: postgres, Password: ***, extra: {}
+[2022-04-28 16:06:59,075] {taskinstance.py:1718} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1334, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1460, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1516, in _execute_task
+    result = execute_callable(context=context)
+  File "/opt/airflow/plugins/Postgres2Postgres.py", line 69, in execute
+    raise exc
+  File "/opt/airflow/plugins/Postgres2Postgres.py", line 65, in execute
+    self._execute(src_hook, dest_hook, context)
+  File "/opt/airflow/plugins/Postgres2Postgres.py", line 50, in _execute
+    commit_every=self.rows_chunk)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/hooks/dbapi.py", line 328, in insert_rows
+    cur.execute(sql, values)
+psycopg2.errors.SyntaxError: INSERT has more expressions than target columns
+LINE 1: ...иал','Алтайский РФ','РФ_18','00000001','00001562','РФ','9999...
+                                                             ^
+
+[2022-04-28 16:06:59,122] {taskinstance.py:1282} INFO - Marking task as FAILED. dag_id=cso_2295_ipo_2_cso_bd.py, task_id=transfer_cso_org, execution_date=20220428T160648, start_date=20220428T160658, end_date=20220428T160659
+[2022-04-28 16:06:59,137] {standard_task_runner.py:92} ERROR - Failed to execute job 1428 for task transfer_cso_org
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/task/task_runner/standard_task_runner.py", line 85, in _start_by_fork
+    args.func(args, dag=self.dag)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/cli/cli_parser.py", line 48, in command
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/cli.py", line 92, in wrapper
+    return f(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/cli/commands/task_command.py", line 298, in task_run
+    _run_task_by_selected_method(args, dag, ti)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/cli/commands/task_command.py", line 107, in _run_task_by_selected_method
+    _run_raw_task(args, ti)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/cli/commands/task_command.py", line 184, in _run_raw_task
+    error_file=args.error_file,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 70, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1334, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1460, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1516, in _execute_task
+    result = execute_callable(context=context)
+  File "/opt/airflow/plugins/Postgres2Postgres.py", line 69, in execute
+    raise exc
+  File "/opt/airflow/plugins/Postgres2Postgres.py", line 65, in execute
+    self._execute(src_hook, dest_hook, context)
+  File "/opt/airflow/plugins/Postgres2Postgres.py", line 50, in _execute
+    commit_every=self.rows_chunk)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/hooks/dbapi.py", line 328, in insert_rows
+    cur.execute(sql, values)
+psycopg2.errors.SyntaxError: INSERT has more expressions than target columns
+LINE 1: ...иал','Алтайский РФ','РФ_18','00000001','00001562','РФ','9999...
+                                                             ^
+
+[2022-04-28 16:06:59,170] {local_task_job.py:154} INFO - Task exited with return code 1
+[2022-04-28 16:06:59,207] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2022-04-28 16:06:59,223] {dbapi.py:225} INFO - Running statement: update list_flow_log
+                set t_end=NOW(), status=3, code_error=3, comment = '*Task*: transfer_cso_org'
+                where id = 131;, parameters: None
+[2022-04-28 16:06:59,224] {dbapi.py:233} INFO - Rows affected: 1
+[2022-04-28 16:06:59,250] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,109 @@
+[2022-04-11 09:56:32,730] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: hook_dag.transfer_suit_pa manual__2022-04-11T09:56:29.607812+00:00 [queued]>
+[2022-04-11 09:56:32,738] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: hook_dag.transfer_suit_pa manual__2022-04-11T09:56:29.607812+00:00 [queued]>
+[2022-04-11 09:56:32,738] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-11 09:56:32,738] {taskinstance.py:1244} INFO - Starting attempt 1 of 2
+[2022-04-11 09:56:32,738] {taskinstance.py:1245} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-11 09:56:32,745] {taskinstance.py:1264} INFO - Executing <Task(Postgres2File): transfer_suit_pa> on 2022-04-11 09:56:29.607812+00:00
+[2022-04-11 09:56:32,750] {standard_task_runner.py:52} INFO - Started process 2233 to run task
+[2022-04-11 09:56:32,752] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'hook_dag', 'transfer_suit_pa', 'manual__2022-04-11T09:56:29.607812+00:00', '--job-id', '66', '--raw', '--subdir', 'DAGS_FOLDER/hook_dag.py', '--cfg-path', '/tmp/tmpo1hdt646', '--error-file', '/tmp/tmpvym6nddl']
+[2022-04-11 09:56:32,753] {standard_task_runner.py:77} INFO - Job 66: Subtask transfer_suit_pa
+[2022-04-11 09:56:32,794] {logging_mixin.py:109} INFO - Running <TaskInstance: hook_dag.transfer_suit_pa manual__2022-04-11T09:56:29.607812+00:00 [running]> on host b69b085ebecc
+[2022-04-11 09:56:32,831] {taskinstance.py:1431} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=hook_dag
+AIRFLOW_CTX_TASK_ID=transfer_suit_pa
+AIRFLOW_CTX_EXECUTION_DATE=2022-04-11T09:56:29.607812+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-04-11T09:56:29.607812+00:00
+[2022-04-11 09:56:32,837] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2022-04-11 09:56:32,842] {warnings.py:110} WARNING - /opt/***/plugins/Postgres2File.py:81: FutureWarning: Use of **kwargs is deprecated, use engine_kwargs instead.
+  datatoexcel = pd.ExcelWriter(dir_file, header=self.headings, encoding=self.encoding)
+
+[2022-04-11 09:56:32,849] {taskinstance.py:1718} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/excel/_base.py", line 827, in __new__
+    engine = config.get_option(f"io.excel.{ext}.writer", silent=True)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/_config/config.py", line 243, in __call__
+    return self.__func__(*args, **kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/_config/config.py", line 115, in _get_option
+    key = _get_single_key(pat, silent)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/_config/config.py", line 101, in _get_single_key
+    raise OptionError(f"No such keys(s): {repr(pat)}")
+pandas._config.config.OptionError: "No such keys(s): 'io.excel.xml.writer'"
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/airflow/plugins/Postgres2File.py", line 92, in execute
+    self._execute(src_hook, context)
+  File "/opt/airflow/plugins/Postgres2File.py", line 81, in _execute
+    datatoexcel = pd.ExcelWriter(dir_file, header=self.headings, encoding=self.encoding)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/excel/_base.py", line 831, in __new__
+    raise ValueError(f"No engine for filetype: '{ext}'") from err
+ValueError: No engine for filetype: 'xml'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1334, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1460, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1516, in _execute_task
+    result = execute_callable(context=context)
+  File "/opt/airflow/plugins/Postgres2File.py", line 96, in execute
+    raise exc
+NameError: name 'exc' is not defined
+[2022-04-11 09:56:32,859] {taskinstance.py:1282} INFO - Marking task as UP_FOR_RETRY. dag_id=hook_dag, task_id=transfer_suit_pa, execution_date=20220411T095629, start_date=20220411T095632, end_date=20220411T095632
+[2022-04-11 09:56:32,867] {standard_task_runner.py:92} ERROR - Failed to execute job 66 for task transfer_suit_pa
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/excel/_base.py", line 827, in __new__
+    engine = config.get_option(f"io.excel.{ext}.writer", silent=True)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/_config/config.py", line 243, in __call__
+    return self.__func__(*args, **kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/_config/config.py", line 115, in _get_option
+    key = _get_single_key(pat, silent)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/_config/config.py", line 101, in _get_single_key
+    raise OptionError(f"No such keys(s): {repr(pat)}")
+pandas._config.config.OptionError: "No such keys(s): 'io.excel.xml.writer'"
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/airflow/plugins/Postgres2File.py", line 92, in execute
+    self._execute(src_hook, context)
+  File "/opt/airflow/plugins/Postgres2File.py", line 81, in _execute
+    datatoexcel = pd.ExcelWriter(dir_file, header=self.headings, encoding=self.encoding)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/excel/_base.py", line 831, in __new__
+    raise ValueError(f"No engine for filetype: '{ext}'") from err
+ValueError: No engine for filetype: 'xml'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/task/task_runner/standard_task_runner.py", line 85, in _start_by_fork
+    args.func(args, dag=self.dag)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/cli/cli_parser.py", line 48, in command
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/cli.py", line 92, in wrapper
+    return f(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/cli/commands/task_command.py", line 298, in task_run
+    _run_task_by_selected_method(args, dag, ti)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/cli/commands/task_command.py", line 107, in _run_task_by_selected_method
+    _run_raw_task(args, ti)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/cli/commands/task_command.py", line 184, in _run_raw_task
+    error_file=args.error_file,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 70, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1334, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1460, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1516, in _execute_task
+    result = execute_callable(context=context)
+  File "/opt/airflow/plugins/Postgres2File.py", line 96, in execute
+    raise exc
+NameError: name 'exc' is not defined
+[2022-04-11 09:56:32,884] {local_task_job.py:154} INFO - Task exited with return code 1
+[2022-04-11 09:56:32,903] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check

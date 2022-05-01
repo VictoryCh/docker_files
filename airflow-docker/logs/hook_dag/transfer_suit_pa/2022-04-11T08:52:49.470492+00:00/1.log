@@ -1,0 +1,76 @@
+[2022-04-11 08:52:58,308] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: hook_dag.transfer_suit_pa manual__2022-04-11T08:52:49.470492+00:00 [queued]>
+[2022-04-11 08:52:58,316] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: hook_dag.transfer_suit_pa manual__2022-04-11T08:52:49.470492+00:00 [queued]>
+[2022-04-11 08:52:58,316] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-11 08:52:58,316] {taskinstance.py:1244} INFO - Starting attempt 1 of 2
+[2022-04-11 08:52:58,316] {taskinstance.py:1245} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-11 08:52:58,350] {taskinstance.py:1264} INFO - Executing <Task(Postgres2File): transfer_suit_pa> on 2022-04-11 08:52:49.470492+00:00
+[2022-04-11 08:52:58,354] {standard_task_runner.py:52} INFO - Started process 4110 to run task
+[2022-04-11 08:52:58,356] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'hook_dag', 'transfer_suit_pa', 'manual__2022-04-11T08:52:49.470492+00:00', '--job-id', '25', '--raw', '--subdir', 'DAGS_FOLDER/hook_dag.py', '--cfg-path', '/tmp/tmpoy3994ec', '--error-file', '/tmp/tmpm1zxl25h']
+[2022-04-11 08:52:58,357] {standard_task_runner.py:77} INFO - Job 25: Subtask transfer_suit_pa
+[2022-04-11 08:52:58,399] {logging_mixin.py:109} INFO - Running <TaskInstance: hook_dag.transfer_suit_pa manual__2022-04-11T08:52:49.470492+00:00 [running]> on host 124cac95d739
+[2022-04-11 08:52:58,527] {taskinstance.py:1431} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=hook_dag
+AIRFLOW_CTX_TASK_ID=transfer_suit_pa
+AIRFLOW_CTX_EXECUTION_DATE=2022-04-11T08:52:49.470492+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-04-11T08:52:49.470492+00:00
+[2022-04-11 08:52:58,533] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2022-04-11 08:52:58,543] {taskinstance.py:1718} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/opt/airflow/plugins/Postgres2File.py", line 65, in execute
+    self._execute(src_hook, context)
+  File "/opt/airflow/plugins/Postgres2File.py", line 60, in _execute
+    context['task_instance'].xcom_push(key='q_rows', value=q_rows)
+UnboundLocalError: local variable 'q_rows' referenced before assignment
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1334, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1460, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1516, in _execute_task
+    result = execute_callable(context=context)
+  File "/opt/airflow/plugins/Postgres2File.py", line 69, in execute
+    raise exc
+NameError: name 'exc' is not defined
+[2022-04-11 08:52:58,575] {taskinstance.py:1282} INFO - Marking task as UP_FOR_RETRY. dag_id=hook_dag, task_id=transfer_suit_pa, execution_date=20220411T085249, start_date=20220411T085258, end_date=20220411T085258
+[2022-04-11 08:52:58,654] {standard_task_runner.py:92} ERROR - Failed to execute job 25 for task transfer_suit_pa
+Traceback (most recent call last):
+  File "/opt/airflow/plugins/Postgres2File.py", line 65, in execute
+    self._execute(src_hook, context)
+  File "/opt/airflow/plugins/Postgres2File.py", line 60, in _execute
+    context['task_instance'].xcom_push(key='q_rows', value=q_rows)
+UnboundLocalError: local variable 'q_rows' referenced before assignment
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/task/task_runner/standard_task_runner.py", line 85, in _start_by_fork
+    args.func(args, dag=self.dag)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/cli/cli_parser.py", line 48, in command
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/cli.py", line 92, in wrapper
+    return f(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/cli/commands/task_command.py", line 298, in task_run
+    _run_task_by_selected_method(args, dag, ti)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/cli/commands/task_command.py", line 107, in _run_task_by_selected_method
+    _run_raw_task(args, ti)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/cli/commands/task_command.py", line 184, in _run_raw_task
+    error_file=args.error_file,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 70, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1334, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1460, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1516, in _execute_task
+    result = execute_callable(context=context)
+  File "/opt/airflow/plugins/Postgres2File.py", line 69, in execute
+    raise exc
+NameError: name 'exc' is not defined
+[2022-04-11 08:52:58,769] {local_task_job.py:154} INFO - Task exited with return code 1
+[2022-04-11 08:52:58,806] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check

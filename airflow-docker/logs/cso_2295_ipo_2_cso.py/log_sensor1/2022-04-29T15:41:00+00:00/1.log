@@ -1,0 +1,228 @@
+[2022-05-01 20:04:26,365] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: cso_2295_ipo_2_cso.py.log_sensor1 scheduled__2022-04-29T15:41:00+00:00 [queued]>
+[2022-05-01 20:04:26,490] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: cso_2295_ipo_2_cso.py.log_sensor1 scheduled__2022-04-29T15:41:00+00:00 [queued]>
+[2022-05-01 20:04:26,491] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-01 20:04:26,491] {taskinstance.py:1244} INFO - Starting attempt 1 of 1
+[2022-05-01 20:04:26,491] {taskinstance.py:1245} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-01 20:04:26,658] {taskinstance.py:1264} INFO - Executing <Task(SqlSensor): log_sensor1> on 2022-04-29 15:41:00+00:00
+[2022-05-01 20:04:26,684] {standard_task_runner.py:52} INFO - Started process 99 to run task
+[2022-05-01 20:04:26,746] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'cso_2295_ipo_2_cso.py', 'log_sensor1', 'scheduled__2022-04-29T15:41:00+00:00', '--job-id', '1496', '--raw', '--subdir', 'DAGS_FOLDER/cso_2295/cso_2295_ipo_2_cso.py', '--cfg-path', '/tmp/tmp19c2jrjn', '--error-file', '/tmp/tmpotzgf32w']
+[2022-05-01 20:04:26,778] {standard_task_runner.py:77} INFO - Job 1496: Subtask log_sensor1
+[2022-05-01 20:04:27,318] {logging_mixin.py:109} INFO - Running <TaskInstance: cso_2295_ipo_2_cso.py.log_sensor1 scheduled__2022-04-29T15:41:00+00:00 [running]> on host 0936e4a14e76
+[2022-05-01 20:04:27,807] {taskinstance.py:1431} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=cso_2295_ipo_2_cso.py
+AIRFLOW_CTX_TASK_ID=log_sensor1
+AIRFLOW_CTX_EXECUTION_DATE=2022-04-29T15:41:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-04-29T15:41:00+00:00
+[2022-05-01 20:04:27,847] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2022-05-01 20:04:28,548] {sql.py:98} INFO - Poking: select case when q = 'true' then 1 else 0 end as q from  (
+	select case when count(id)=0 then 'true' else 'false' end as q
+	from list_flow_log
+	where object_flow = 0 and status = 1
+) t1; (with parameters None)
+[2022-05-01 20:04:28,590] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2022-05-01 20:05:28,681] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2022-05-01 20:05:28,752] {sql.py:98} INFO - Poking: select case when q = 'true' then 1 else 0 end as q from  (
+	select case when count(id)=0 then 'true' else 'false' end as q
+	from list_flow_log
+	where object_flow = 0 and status = 1
+) t1; (with parameters None)
+[2022-05-01 20:05:28,769] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2022-05-01 20:06:28,867] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2022-05-01 20:06:28,938] {sql.py:98} INFO - Poking: select case when q = 'true' then 1 else 0 end as q from  (
+	select case when count(id)=0 then 'true' else 'false' end as q
+	from list_flow_log
+	where object_flow = 0 and status = 1
+) t1; (with parameters None)
+[2022-05-01 20:06:28,943] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2022-05-01 20:07:29,007] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2022-05-01 20:07:29,046] {sql.py:98} INFO - Poking: select case when q = 'true' then 1 else 0 end as q from  (
+	select case when count(id)=0 then 'true' else 'false' end as q
+	from list_flow_log
+	where object_flow = 0 and status = 1
+) t1; (with parameters None)
+[2022-05-01 20:07:29,051] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2022-05-01 20:08:29,129] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2022-05-01 20:08:29,194] {sql.py:98} INFO - Poking: select case when q = 'true' then 1 else 0 end as q from  (
+	select case when count(id)=0 then 'true' else 'false' end as q
+	from list_flow_log
+	where object_flow = 0 and status = 1
+) t1; (with parameters None)
+[2022-05-01 20:08:29,199] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2022-05-01 20:09:29,267] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2022-05-01 20:09:29,316] {sql.py:98} INFO - Poking: select case when q = 'true' then 1 else 0 end as q from  (
+	select case when count(id)=0 then 'true' else 'false' end as q
+	from list_flow_log
+	where object_flow = 0 and status = 1
+) t1; (with parameters None)
+[2022-05-01 20:09:29,321] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2022-05-01 20:10:29,400] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2022-05-01 20:10:29,527] {sql.py:98} INFO - Poking: select case when q = 'true' then 1 else 0 end as q from  (
+	select case when count(id)=0 then 'true' else 'false' end as q
+	from list_flow_log
+	where object_flow = 0 and status = 1
+) t1; (with parameters None)
+[2022-05-01 20:10:29,533] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2022-05-01 20:11:29,614] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2022-05-01 20:11:29,767] {sql.py:98} INFO - Poking: select case when q = 'true' then 1 else 0 end as q from  (
+	select case when count(id)=0 then 'true' else 'false' end as q
+	from list_flow_log
+	where object_flow = 0 and status = 1
+) t1; (with parameters None)
+[2022-05-01 20:11:29,773] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2022-05-01 20:12:29,855] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2022-05-01 20:12:29,909] {sql.py:98} INFO - Poking: select case when q = 'true' then 1 else 0 end as q from  (
+	select case when count(id)=0 then 'true' else 'false' end as q
+	from list_flow_log
+	where object_flow = 0 and status = 1
+) t1; (with parameters None)
+[2022-05-01 20:12:29,917] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2022-05-01 20:13:29,989] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2022-05-01 20:13:30,032] {sql.py:98} INFO - Poking: select case when q = 'true' then 1 else 0 end as q from  (
+	select case when count(id)=0 then 'true' else 'false' end as q
+	from list_flow_log
+	where object_flow = 0 and status = 1
+) t1; (with parameters None)
+[2022-05-01 20:13:30,037] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2022-05-01 20:14:30,104] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2022-05-01 20:14:30,151] {sql.py:98} INFO - Poking: select case when q = 'true' then 1 else 0 end as q from  (
+	select case when count(id)=0 then 'true' else 'false' end as q
+	from list_flow_log
+	where object_flow = 0 and status = 1
+) t1; (with parameters None)
+[2022-05-01 20:14:30,158] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2022-05-01 20:15:30,228] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2022-05-01 20:15:30,274] {sql.py:98} INFO - Poking: select case when q = 'true' then 1 else 0 end as q from  (
+	select case when count(id)=0 then 'true' else 'false' end as q
+	from list_flow_log
+	where object_flow = 0 and status = 1
+) t1; (with parameters None)
+[2022-05-01 20:15:30,279] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2022-05-01 20:16:30,347] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2022-05-01 20:16:30,433] {sql.py:98} INFO - Poking: select case when q = 'true' then 1 else 0 end as q from  (
+	select case when count(id)=0 then 'true' else 'false' end as q
+	from list_flow_log
+	where object_flow = 0 and status = 1
+) t1; (with parameters None)
+[2022-05-01 20:16:30,440] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2022-05-01 20:17:30,515] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2022-05-01 20:17:30,645] {sql.py:98} INFO - Poking: select case when q = 'true' then 1 else 0 end as q from  (
+	select case when count(id)=0 then 'true' else 'false' end as q
+	from list_flow_log
+	where object_flow = 0 and status = 1
+) t1; (with parameters None)
+[2022-05-01 20:17:30,658] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2022-05-01 20:18:30,728] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2022-05-01 20:18:30,774] {sql.py:98} INFO - Poking: select case when q = 'true' then 1 else 0 end as q from  (
+	select case when count(id)=0 then 'true' else 'false' end as q
+	from list_flow_log
+	where object_flow = 0 and status = 1
+) t1; (with parameters None)
+[2022-05-01 20:18:30,779] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2022-05-01 20:19:30,861] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2022-05-01 20:19:30,922] {sql.py:98} INFO - Poking: select case when q = 'true' then 1 else 0 end as q from  (
+	select case when count(id)=0 then 'true' else 'false' end as q
+	from list_flow_log
+	where object_flow = 0 and status = 1
+) t1; (with parameters None)
+[2022-05-01 20:19:30,927] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2022-05-01 20:20:31,008] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2022-05-01 20:20:31,123] {sql.py:98} INFO - Poking: select case when q = 'true' then 1 else 0 end as q from  (
+	select case when count(id)=0 then 'true' else 'false' end as q
+	from list_flow_log
+	where object_flow = 0 and status = 1
+) t1; (with parameters None)
+[2022-05-01 20:20:31,128] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2022-05-01 20:21:31,197] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2022-05-01 20:21:31,276] {sql.py:98} INFO - Poking: select case when q = 'true' then 1 else 0 end as q from  (
+	select case when count(id)=0 then 'true' else 'false' end as q
+	from list_flow_log
+	where object_flow = 0 and status = 1
+) t1; (with parameters None)
+[2022-05-01 20:21:31,282] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2022-05-01 20:22:31,352] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2022-05-01 20:22:31,404] {sql.py:98} INFO - Poking: select case when q = 'true' then 1 else 0 end as q from  (
+	select case when count(id)=0 then 'true' else 'false' end as q
+	from list_flow_log
+	where object_flow = 0 and status = 1
+) t1; (with parameters None)
+[2022-05-01 20:22:31,409] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2022-05-01 20:23:31,496] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2022-05-01 20:23:31,559] {sql.py:98} INFO - Poking: select case when q = 'true' then 1 else 0 end as q from  (
+	select case when count(id)=0 then 'true' else 'false' end as q
+	from list_flow_log
+	where object_flow = 0 and status = 1
+) t1; (with parameters None)
+[2022-05-01 20:23:31,564] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2022-05-01 20:24:31,631] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2022-05-01 20:24:31,676] {sql.py:98} INFO - Poking: select case when q = 'true' then 1 else 0 end as q from  (
+	select case when count(id)=0 then 'true' else 'false' end as q
+	from list_flow_log
+	where object_flow = 0 and status = 1
+) t1; (with parameters None)
+[2022-05-01 20:24:31,681] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2022-05-01 20:25:31,762] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2022-05-01 20:25:31,815] {sql.py:98} INFO - Poking: select case when q = 'true' then 1 else 0 end as q from  (
+	select case when count(id)=0 then 'true' else 'false' end as q
+	from list_flow_log
+	where object_flow = 0 and status = 1
+) t1; (with parameters None)
+[2022-05-01 20:25:31,820] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2022-05-01 20:26:31,891] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2022-05-01 20:26:31,934] {sql.py:98} INFO - Poking: select case when q = 'true' then 1 else 0 end as q from  (
+	select case when count(id)=0 then 'true' else 'false' end as q
+	from list_flow_log
+	where object_flow = 0 and status = 1
+) t1; (with parameters None)
+[2022-05-01 20:26:31,942] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2022-05-01 20:27:32,008] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2022-05-01 20:27:32,050] {sql.py:98} INFO - Poking: select case when q = 'true' then 1 else 0 end as q from  (
+	select case when count(id)=0 then 'true' else 'false' end as q
+	from list_flow_log
+	where object_flow = 0 and status = 1
+) t1; (with parameters None)
+[2022-05-01 20:27:32,055] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2022-05-01 20:28:32,123] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2022-05-01 20:28:32,165] {sql.py:98} INFO - Poking: select case when q = 'true' then 1 else 0 end as q from  (
+	select case when count(id)=0 then 'true' else 'false' end as q
+	from list_flow_log
+	where object_flow = 0 and status = 1
+) t1; (with parameters None)
+[2022-05-01 20:28:32,170] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2022-05-01 20:29:32,237] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2022-05-01 20:29:32,281] {sql.py:98} INFO - Poking: select case when q = 'true' then 1 else 0 end as q from  (
+	select case when count(id)=0 then 'true' else 'false' end as q
+	from list_flow_log
+	where object_flow = 0 and status = 1
+) t1; (with parameters None)
+[2022-05-01 20:29:32,286] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2022-05-01 20:30:32,362] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2022-05-01 20:30:32,454] {sql.py:98} INFO - Poking: select case when q = 'true' then 1 else 0 end as q from  (
+	select case when count(id)=0 then 'true' else 'false' end as q
+	from list_flow_log
+	where object_flow = 0 and status = 1
+) t1; (with parameters None)
+[2022-05-01 20:30:32,459] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2022-05-01 20:31:32,527] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2022-05-01 20:31:32,597] {sql.py:98} INFO - Poking: select case when q = 'true' then 1 else 0 end as q from  (
+	select case when count(id)=0 then 'true' else 'false' end as q
+	from list_flow_log
+	where object_flow = 0 and status = 1
+) t1; (with parameters None)
+[2022-05-01 20:31:32,619] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2022-05-01 20:32:32,703] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2022-05-01 20:32:33,043] {sql.py:98} INFO - Poking: select case when q = 'true' then 1 else 0 end as q from  (
+	select case when count(id)=0 then 'true' else 'false' end as q
+	from list_flow_log
+	where object_flow = 0 and status = 1
+) t1; (with parameters None)
+[2022-05-01 20:32:33,058] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2022-05-01 20:33:33,154] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2022-05-01 20:33:33,199] {sql.py:98} INFO - Poking: select case when q = 'true' then 1 else 0 end as q from  (
+	select case when count(id)=0 then 'true' else 'false' end as q
+	from list_flow_log
+	where object_flow = 0 and status = 1
+) t1; (with parameters None)
+[2022-05-01 20:33:33,209] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}

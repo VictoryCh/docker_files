@@ -1,0 +1,35 @@
+[2022-04-25 08:16:38,537] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: cso_2295_ipo_2_cso_xls.py.transfer_cso_ssp manual__2022-04-25T08:14:20.098498+00:00 [queued]>
+[2022-04-25 08:16:38,547] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: cso_2295_ipo_2_cso_xls.py.transfer_cso_ssp manual__2022-04-25T08:14:20.098498+00:00 [queued]>
+[2022-04-25 08:16:38,547] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-25 08:16:38,547] {taskinstance.py:1244} INFO - Starting attempt 1 of 1
+[2022-04-25 08:16:38,547] {taskinstance.py:1245} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-25 08:16:38,554] {taskinstance.py:1264} INFO - Executing <Task(Postgres2File): transfer_cso_ssp> on 2022-04-25 08:14:20.098498+00:00
+[2022-04-25 08:16:38,558] {standard_task_runner.py:52} INFO - Started process 812 to run task
+[2022-04-25 08:16:38,561] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'cso_2295_ipo_2_cso_xls.py', 'transfer_cso_ssp', 'manual__2022-04-25T08:14:20.098498+00:00', '--job-id', '1104', '--raw', '--subdir', 'DAGS_FOLDER/cso_2295/cso_2295_ipo_2_cso_xls.py', '--cfg-path', '/tmp/tmpu8m7k72_', '--error-file', '/tmp/tmpwda4figw']
+[2022-04-25 08:16:38,561] {standard_task_runner.py:77} INFO - Job 1104: Subtask transfer_cso_ssp
+[2022-04-25 08:16:38,594] {logging_mixin.py:109} INFO - Running <TaskInstance: cso_2295_ipo_2_cso_xls.py.transfer_cso_ssp manual__2022-04-25T08:14:20.098498+00:00 [running]> on host 22e04adb6bfa
+[2022-04-25 08:16:38,628] {taskinstance.py:1431} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=cso_2295_ipo_2_cso_xls.py
+AIRFLOW_CTX_TASK_ID=transfer_cso_ssp
+AIRFLOW_CTX_EXECUTION_DATE=2022-04-25T08:14:20.098498+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-04-25T08:14:20.098498+00:00
+[2022-04-25 08:16:38,634] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2022-04-25 08:16:38,941] {warnings.py:110} WARNING - /opt/***/plugins/Postgres2File.py:66: FutureWarning: Use of **kwargs is deprecated, use engine_kwargs instead.
+  datatoexcel = pd.ExcelWriter(dir_file, header=self.headings, encoding=self.encoding)
+
+[2022-04-25 08:16:38,975] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/models/taskinstance.py:1516: FutureWarning: As the xlwt package is no longer maintained, the xlwt engine will be removed in a future version of pandas. This is the only engine in pandas that supports writing in the xls format. Install openpyxl and write to an xlsx file instead. You can set the option io.excel.xls.writer to 'xlwt' to silence this warning. While this option is deprecated and will also raise a warning, it can be globally set and the warning suppressed.
+  result = execute_callable(context=context)
+
+[2022-04-25 08:16:39,106] {taskinstance.py:1282} INFO - Marking task as SUCCESS. dag_id=cso_2295_ipo_2_cso_xls.py, task_id=transfer_cso_ssp, execution_date=20220425T081420, start_date=20220425T081638, end_date=20220425T081639
+[2022-04-25 08:16:39,174] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-04-25 08:16:39,208] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2022-04-25 08:16:39,210] {dbapi.py:225} INFO - Running statement: UPDATE list_flow_log
+                        SET q_source=2,
+                        q_target=2, t_end=NOW(), status=2,
+                        optional_key='transfer_cso_ssp'
+                        where id = 98;, parameters: None
+[2022-04-25 08:16:39,211] {dbapi.py:233} INFO - Rows affected: 1
+[2022-04-25 08:16:39,226] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check

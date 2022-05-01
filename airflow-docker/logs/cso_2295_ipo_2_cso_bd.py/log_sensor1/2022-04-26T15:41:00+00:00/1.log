@@ -1,0 +1,43 @@
+[2022-04-28 09:57:46,497] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: cso_2295_ipo_2_cso_bd.py.log_sensor1 scheduled__2022-04-26T15:41:00+00:00 [queued]>
+[2022-04-28 09:57:46,541] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: cso_2295_ipo_2_cso_bd.py.log_sensor1 scheduled__2022-04-26T15:41:00+00:00 [queued]>
+[2022-04-28 09:57:46,541] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-28 09:57:46,541] {taskinstance.py:1244} INFO - Starting attempt 1 of 1
+[2022-04-28 09:57:46,541] {taskinstance.py:1245} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-28 09:57:46,550] {taskinstance.py:1264} INFO - Executing <Task(SqlSensor): log_sensor1> on 2022-04-26 15:41:00+00:00
+[2022-04-28 09:57:46,554] {standard_task_runner.py:52} INFO - Started process 4653 to run task
+[2022-04-28 09:57:46,560] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'cso_2295_ipo_2_cso_bd.py', 'log_sensor1', 'scheduled__2022-04-26T15:41:00+00:00', '--job-id', '1316', '--raw', '--subdir', 'DAGS_FOLDER/cso_2295/cso_2295_ipo_2_cso_bd.py', '--cfg-path', '/tmp/tmp8337os8d', '--error-file', '/tmp/tmp4xgkrdyu']
+[2022-04-28 09:57:46,561] {standard_task_runner.py:77} INFO - Job 1316: Subtask log_sensor1
+[2022-04-28 09:57:46,649] {logging_mixin.py:109} INFO - Running <TaskInstance: cso_2295_ipo_2_cso_bd.py.log_sensor1 scheduled__2022-04-26T15:41:00+00:00 [running]> on host 0936e4a14e76
+[2022-04-28 09:57:46,994] {taskinstance.py:1431} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=cso_2295_ipo_2_cso_bd.py
+AIRFLOW_CTX_TASK_ID=log_sensor1
+AIRFLOW_CTX_EXECUTION_DATE=2022-04-26T15:41:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-04-26T15:41:00+00:00
+[2022-04-28 09:57:47,005] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2022-04-28 09:57:47,615] {sql.py:98} INFO - Poking: select case when q = 'true' then 1 else 0 end as q from  (
+	select case when count(id)=0 then 'true' else 'false' end as q
+	from list_flow_log
+	where object_flow = 0 and status = 1
+) t1; (with parameters None)
+[2022-04-28 09:57:47,621] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2022-04-28 09:58:47,692] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2022-04-28 09:58:47,736] {sql.py:98} INFO - Poking: select case when q = 'true' then 1 else 0 end as q from  (
+	select case when count(id)=0 then 'true' else 'false' end as q
+	from list_flow_log
+	where object_flow = 0 and status = 1
+) t1; (with parameters None)
+[2022-04-28 09:58:47,742] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2022-04-28 09:59:47,808] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2022-04-28 09:59:47,855] {sql.py:98} INFO - Poking: select case when q = 'true' then 1 else 0 end as q from  (
+	select case when count(id)=0 then 'true' else 'false' end as q
+	from list_flow_log
+	where object_flow = 0 and status = 1
+) t1; (with parameters None)
+[2022-04-28 09:59:47,861] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2022-04-28 09:59:47,865] {base.py:251} INFO - Success criteria met. Exiting.
+[2022-04-28 09:59:47,874] {taskinstance.py:1282} INFO - Marking task as SUCCESS. dag_id=cso_2295_ipo_2_cso_bd.py, task_id=log_sensor1, execution_date=20220426T154100, start_date=20220428T095746, end_date=20220428T095947
+[2022-04-28 09:59:48,070] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-04-28 09:59:48,109] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,23 @@
+[2022-04-25 08:47:14,394] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: cso_2295_ipo_2_cso_xls.py.getid3 manual__2022-04-25T08:46:57.683080+00:00 [queued]>
+[2022-04-25 08:47:14,407] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: cso_2295_ipo_2_cso_xls.py.getid3 manual__2022-04-25T08:46:57.683080+00:00 [queued]>
+[2022-04-25 08:47:14,407] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-25 08:47:14,407] {taskinstance.py:1244} INFO - Starting attempt 1 of 1
+[2022-04-25 08:47:14,407] {taskinstance.py:1245} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-25 08:47:14,418] {taskinstance.py:1264} INFO - Executing <Task(PythonOperator): getid3> on 2022-04-25 08:46:57.683080+00:00
+[2022-04-25 08:47:14,422] {standard_task_runner.py:52} INFO - Started process 2590 to run task
+[2022-04-25 08:47:14,425] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'cso_2295_ipo_2_cso_xls.py', 'getid3', 'manual__2022-04-25T08:46:57.683080+00:00', '--job-id', '1196', '--raw', '--subdir', 'DAGS_FOLDER/cso_2295/cso_2295_ipo_2_cso_xls.py', '--cfg-path', '/tmp/tmpk0lloy4v', '--error-file', '/tmp/tmpvep8j8ov']
+[2022-04-25 08:47:14,425] {standard_task_runner.py:77} INFO - Job 1196: Subtask getid3
+[2022-04-25 08:47:14,476] {logging_mixin.py:109} INFO - Running <TaskInstance: cso_2295_ipo_2_cso_xls.py.getid3 manual__2022-04-25T08:46:57.683080+00:00 [running]> on host 22e04adb6bfa
+[2022-04-25 08:47:14,516] {taskinstance.py:1431} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=cso_2295_ipo_2_cso_xls.py
+AIRFLOW_CTX_TASK_ID=getid3
+AIRFLOW_CTX_EXECUTION_DATE=2022-04-25T08:46:57.683080+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-04-25T08:46:57.683080+00:00
+[2022-04-25 08:47:14,523] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2022-04-25 08:47:14,540] {python.py:175} INFO - Done. Returned value was: None
+[2022-04-25 08:47:14,548] {taskinstance.py:1282} INFO - Marking task as SUCCESS. dag_id=cso_2295_ipo_2_cso_xls.py, task_id=getid3, execution_date=20220425T084657, start_date=20220425T084714, end_date=20220425T084714
+[2022-04-25 08:47:14,600] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-04-25 08:47:14,644] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check

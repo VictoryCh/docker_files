@@ -1,0 +1,29 @@
+[2022-04-25 08:48:13,236] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: cso_2295_ipo_2_cso_xls.py.transfer_cso_timezone manual__2022-04-25T08:46:57.683080+00:00 [queued]>
+[2022-04-25 08:48:13,246] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: cso_2295_ipo_2_cso_xls.py.transfer_cso_timezone manual__2022-04-25T08:46:57.683080+00:00 [queued]>
+[2022-04-25 08:48:13,247] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-25 08:48:13,247] {taskinstance.py:1244} INFO - Starting attempt 1 of 1
+[2022-04-25 08:48:13,247] {taskinstance.py:1245} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-25 08:48:13,254] {taskinstance.py:1264} INFO - Executing <Task(Postgres2File): transfer_cso_timezone> on 2022-04-25 08:46:57.683080+00:00
+[2022-04-25 08:48:13,259] {standard_task_runner.py:52} INFO - Started process 2656 to run task
+[2022-04-25 08:48:13,261] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'cso_2295_ipo_2_cso_xls.py', 'transfer_cso_timezone', 'manual__2022-04-25T08:46:57.683080+00:00', '--job-id', '1206', '--raw', '--subdir', 'DAGS_FOLDER/cso_2295/cso_2295_ipo_2_cso_xls.py', '--cfg-path', '/tmp/tmpbux4w_za', '--error-file', '/tmp/tmp4rzduitb']
+[2022-04-25 08:48:13,262] {standard_task_runner.py:77} INFO - Job 1206: Subtask transfer_cso_timezone
+[2022-04-25 08:48:13,310] {logging_mixin.py:109} INFO - Running <TaskInstance: cso_2295_ipo_2_cso_xls.py.transfer_cso_timezone manual__2022-04-25T08:46:57.683080+00:00 [running]> on host 22e04adb6bfa
+[2022-04-25 08:48:13,350] {taskinstance.py:1431} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=cso_2295_ipo_2_cso_xls.py
+AIRFLOW_CTX_TASK_ID=transfer_cso_timezone
+AIRFLOW_CTX_EXECUTION_DATE=2022-04-25T08:46:57.683080+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-04-25T08:46:57.683080+00:00
+[2022-04-25 08:48:13,355] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2022-04-25 08:48:13,385] {taskinstance.py:1282} INFO - Marking task as SUCCESS. dag_id=cso_2295_ipo_2_cso_xls.py, task_id=transfer_cso_timezone, execution_date=20220425T084657, start_date=20220425T084813, end_date=20220425T084813
+[2022-04-25 08:48:13,433] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-04-25 08:48:13,472] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2022-04-25 08:48:13,475] {dbapi.py:225} INFO - Running statement: UPDATE list_flow_log
+                        SET q_source=8,
+                        q_target=8, t_end=NOW(), status=2,
+                        optional_key='transfer_cso_timezone'
+                        where id = 111;, parameters: None
+[2022-04-25 08:48:13,476] {dbapi.py:233} INFO - Rows affected: 1
+[2022-04-25 08:48:13,496] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check

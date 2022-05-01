@@ -1,0 +1,91 @@
+[2022-04-19 09:35:30,957] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: hook_dag.log_start manual__2022-04-19T09:35:29.074355+00:00 [queued]>
+[2022-04-19 09:35:30,964] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: hook_dag.log_start manual__2022-04-19T09:35:29.074355+00:00 [queued]>
+[2022-04-19 09:35:30,964] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-19 09:35:30,964] {taskinstance.py:1244} INFO - Starting attempt 1 of 2
+[2022-04-19 09:35:30,964] {taskinstance.py:1245} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-19 09:35:30,971] {taskinstance.py:1264} INFO - Executing <Task(PostgresOperator): log_start> on 2022-04-19 09:35:29.074355+00:00
+[2022-04-19 09:35:30,975] {standard_task_runner.py:52} INFO - Started process 2167 to run task
+[2022-04-19 09:35:30,977] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'hook_dag', 'log_start', 'manual__2022-04-19T09:35:29.074355+00:00', '--job-id', '172', '--raw', '--subdir', 'DAGS_FOLDER/hook_dag.py', '--cfg-path', '/tmp/tmpowh7srt1', '--error-file', '/tmp/tmpwmacep5o']
+[2022-04-19 09:35:30,978] {standard_task_runner.py:77} INFO - Job 172: Subtask log_start
+[2022-04-19 09:35:31,014] {logging_mixin.py:109} INFO - Running <TaskInstance: hook_dag.log_start manual__2022-04-19T09:35:29.074355+00:00 [running]> on host 22e04adb6bfa
+[2022-04-19 09:35:31,050] {taskinstance.py:1431} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=hook_dag
+AIRFLOW_CTX_TASK_ID=log_start
+AIRFLOW_CTX_EXECUTION_DATE=2022-04-19T09:35:29.074355+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-04-19T09:35:29.074355+00:00
+[2022-04-19 09:35:31,056] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2022-04-19 09:35:31,059] {dbapi.py:225} INFO - Running statement: do $$
+declare
+	q_stream integer;
+begin  
+	select 1 into q_stream
+	from list_flow_log
+	where object_flow = 1 and status = 1;
+  
+	if q_stream > 0 then
+		raise exception 'IP-offline - The stream is blocked';
+	else 
+  		INSERT INTO list_flow_log (object_flow, t_start, status) VALUES(1, NOW(), 1);
+	end if;
+
+end $$, parameters: None
+[2022-04-19 09:35:31,060] {taskinstance.py:1718} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1334, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1460, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1516, in _execute_task
+    result = execute_callable(context=context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/postgres/operators/postgres.py", line 71, in execute
+    self.hook.run(self.sql, self.autocommit, parameters=self.parameters)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/hooks/dbapi.py", line 205, in run
+    self._run_command(cur, sql_statement, parameters)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/hooks/dbapi.py", line 229, in _run_command
+    cur.execute(sql_statement)
+psycopg2.errors.UndefinedColumn: column "t_start" of relation "list_flow_log" does not exist
+LINE 1: INSERT INTO list_flow_log (object_flow, t_start, status) VAL...
+                                                ^
+QUERY:  INSERT INTO list_flow_log (object_flow, t_start, status) VALUES(1, NOW(), 1)
+CONTEXT:  PL/pgSQL function inline_code_block line 12 at SQL statement
+
+[2022-04-19 09:35:31,069] {taskinstance.py:1282} INFO - Marking task as UP_FOR_RETRY. dag_id=hook_dag, task_id=log_start, execution_date=20220419T093529, start_date=20220419T093530, end_date=20220419T093531
+[2022-04-19 09:35:31,076] {standard_task_runner.py:92} ERROR - Failed to execute job 172 for task log_start
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/task/task_runner/standard_task_runner.py", line 85, in _start_by_fork
+    args.func(args, dag=self.dag)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/cli/cli_parser.py", line 48, in command
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/cli.py", line 92, in wrapper
+    return f(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/cli/commands/task_command.py", line 298, in task_run
+    _run_task_by_selected_method(args, dag, ti)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/cli/commands/task_command.py", line 107, in _run_task_by_selected_method
+    _run_raw_task(args, ti)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/cli/commands/task_command.py", line 184, in _run_raw_task
+    error_file=args.error_file,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 70, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1334, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1460, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1516, in _execute_task
+    result = execute_callable(context=context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/postgres/operators/postgres.py", line 71, in execute
+    self.hook.run(self.sql, self.autocommit, parameters=self.parameters)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/hooks/dbapi.py", line 205, in run
+    self._run_command(cur, sql_statement, parameters)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/hooks/dbapi.py", line 229, in _run_command
+    cur.execute(sql_statement)
+psycopg2.errors.UndefinedColumn: column "t_start" of relation "list_flow_log" does not exist
+LINE 1: INSERT INTO list_flow_log (object_flow, t_start, status) VAL...
+                                                ^
+QUERY:  INSERT INTO list_flow_log (object_flow, t_start, status) VALUES(1, NOW(), 1)
+CONTEXT:  PL/pgSQL function inline_code_block line 12 at SQL statement
+
+[2022-04-19 09:35:31,109] {local_task_job.py:154} INFO - Task exited with return code 1
+[2022-04-19 09:35:31,149] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check

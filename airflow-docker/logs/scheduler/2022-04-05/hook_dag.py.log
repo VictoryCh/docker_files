@@ -1,0 +1,714 @@
+[2022-04-05 20:57:42,901] {processor.py:163} INFO - Started process (PID=29) to work on /opt/airflow/dags/hook_dag.py
+[2022-04-05 20:57:42,902] {processor.py:642} INFO - Processing file /opt/airflow/dags/hook_dag.py for tasks to queue
+[2022-04-05 20:57:42,907] {logging_mixin.py:109} INFO - [2022-04-05 20:57:42,907] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/hook_dag.py
+[2022-04-05 20:57:42,965] {logging_mixin.py:109} INFO - [2022-04-05 20:57:42,964] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: airflow, Login: airflow, Password: airflow, extra: {}
+[2022-04-05 20:57:42,980] {logging_mixin.py:109} INFO - [2022-04-05 20:57:42,975] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/hook_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/hook_dag.py", line 33, in <module>
+    hook_task = PythonOperator(task_id='hook_task', python_callable=get_activated_sources())
+  File "/opt/airflow/dags/hook_dag.py", line 21, in get_activated_sources
+    cursor.execute(request)
+psycopg2.errors.UndefinedTable: relation "course.source" does not exist
+LINE 1: SELECT * FROM course.source
+                      ^
+[2022-04-05 20:57:42,984] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/hook_dag.py
+[2022-04-05 20:57:43,001] {processor.py:171} INFO - Processing /opt/airflow/dags/hook_dag.py took 0.103 seconds
+[2022-04-05 20:58:13,361] {processor.py:163} INFO - Started process (PID=62) to work on /opt/airflow/dags/hook_dag.py
+[2022-04-05 20:58:13,365] {processor.py:642} INFO - Processing file /opt/airflow/dags/hook_dag.py for tasks to queue
+[2022-04-05 20:58:13,366] {logging_mixin.py:109} INFO - [2022-04-05 20:58:13,366] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/hook_dag.py
+[2022-04-05 20:58:13,410] {logging_mixin.py:109} INFO - [2022-04-05 20:58:13,410] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: airflow, Login: airflow, Password: airflow, extra: {}
+[2022-04-05 20:58:13,418] {logging_mixin.py:109} INFO - [2022-04-05 20:58:13,417] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/hook_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/hook_dag.py", line 33, in <module>
+    hook_task = PythonOperator(task_id='hook_task', python_callable=get_activated_sources())
+  File "/opt/airflow/dags/hook_dag.py", line 21, in get_activated_sources
+    cursor.execute(request)
+psycopg2.errors.UndefinedTable: relation "course.source" does not exist
+LINE 1: SELECT * FROM course.source
+                      ^
+[2022-04-05 20:58:13,428] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/hook_dag.py
+[2022-04-05 20:58:13,435] {processor.py:171} INFO - Processing /opt/airflow/dags/hook_dag.py took 0.078 seconds
+[2022-04-05 20:58:43,648] {processor.py:163} INFO - Started process (PID=93) to work on /opt/airflow/dags/hook_dag.py
+[2022-04-05 20:58:43,648] {processor.py:642} INFO - Processing file /opt/airflow/dags/hook_dag.py for tasks to queue
+[2022-04-05 20:58:43,649] {logging_mixin.py:109} INFO - [2022-04-05 20:58:43,649] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/hook_dag.py
+[2022-04-05 20:58:43,675] {logging_mixin.py:109} INFO - [2022-04-05 20:58:43,675] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: airflow, Login: airflow, Password: airflow, extra: {}
+[2022-04-05 20:58:43,695] {logging_mixin.py:109} INFO - [2022-04-05 20:58:43,694] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/hook_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/hook_dag.py", line 33, in <module>
+    hook_task = PythonOperator(task_id='hook_task', python_callable=get_activated_sources())
+  File "/opt/airflow/dags/hook_dag.py", line 21, in get_activated_sources
+    cursor.execute(request)
+psycopg2.errors.UndefinedTable: relation "course.source" does not exist
+LINE 1: SELECT * FROM course.source
+                      ^
+[2022-04-05 20:58:43,700] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/hook_dag.py
+[2022-04-05 20:58:43,707] {processor.py:171} INFO - Processing /opt/airflow/dags/hook_dag.py took 0.061 seconds
+[2022-04-05 20:59:13,876] {processor.py:163} INFO - Started process (PID=118) to work on /opt/airflow/dags/hook_dag.py
+[2022-04-05 20:59:13,877] {processor.py:642} INFO - Processing file /opt/airflow/dags/hook_dag.py for tasks to queue
+[2022-04-05 20:59:13,878] {logging_mixin.py:109} INFO - [2022-04-05 20:59:13,878] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/hook_dag.py
+[2022-04-05 20:59:13,897] {logging_mixin.py:109} INFO - [2022-04-05 20:59:13,897] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: airflow, Login: airflow, Password: airflow, extra: {}
+[2022-04-05 20:59:13,901] {logging_mixin.py:109} INFO - [2022-04-05 20:59:13,900] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/hook_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/hook_dag.py", line 33, in <module>
+    hook_task = PythonOperator(task_id='hook_task', python_callable=get_activated_sources())
+  File "/opt/airflow/dags/hook_dag.py", line 21, in get_activated_sources
+    cursor.execute(request)
+psycopg2.errors.UndefinedTable: relation "course.source" does not exist
+LINE 1: SELECT * FROM course.source
+                      ^
+[2022-04-05 20:59:13,906] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/hook_dag.py
+[2022-04-05 20:59:13,913] {processor.py:171} INFO - Processing /opt/airflow/dags/hook_dag.py took 0.038 seconds
+[2022-04-05 20:59:44,060] {processor.py:163} INFO - Started process (PID=150) to work on /opt/airflow/dags/hook_dag.py
+[2022-04-05 20:59:44,061] {processor.py:642} INFO - Processing file /opt/airflow/dags/hook_dag.py for tasks to queue
+[2022-04-05 20:59:44,063] {logging_mixin.py:109} INFO - [2022-04-05 20:59:44,063] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/hook_dag.py
+[2022-04-05 20:59:44,081] {logging_mixin.py:109} INFO - [2022-04-05 20:59:44,081] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: airflow, Login: airflow, Password: airflow, extra: {}
+[2022-04-05 20:59:44,098] {logging_mixin.py:109} INFO - [2022-04-05 20:59:44,098] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/hook_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/hook_dag.py", line 33, in <module>
+    hook_task = PythonOperator(task_id='hook_task', python_callable=get_activated_sources())
+  File "/opt/airflow/dags/hook_dag.py", line 21, in get_activated_sources
+    cursor.execute(request)
+psycopg2.errors.UndefinedTable: relation "course.source" does not exist
+LINE 1: SELECT * FROM course.source
+                      ^
+[2022-04-05 20:59:44,120] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/hook_dag.py
+[2022-04-05 20:59:44,132] {processor.py:171} INFO - Processing /opt/airflow/dags/hook_dag.py took 0.077 seconds
+[2022-04-05 21:00:14,263] {processor.py:163} INFO - Started process (PID=174) to work on /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:00:14,264] {processor.py:642} INFO - Processing file /opt/airflow/dags/hook_dag.py for tasks to queue
+[2022-04-05 21:00:14,264] {logging_mixin.py:109} INFO - [2022-04-05 21:00:14,264] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:00:14,286] {logging_mixin.py:109} INFO - [2022-04-05 21:00:14,286] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: airflow, Login: airflow, Password: airflow, extra: {}
+[2022-04-05 21:00:14,296] {logging_mixin.py:109} INFO - [2022-04-05 21:00:14,295] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/hook_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/hook_dag.py", line 33, in <module>
+    hook_task = PythonOperator(task_id='hook_task', python_callable=get_activated_sources())
+  File "/opt/airflow/dags/hook_dag.py", line 21, in get_activated_sources
+    cursor.execute(request)
+psycopg2.errors.UndefinedTable: relation "course.source" does not exist
+LINE 1: SELECT * FROM course.source
+                      ^
+[2022-04-05 21:00:14,301] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:00:14,308] {processor.py:171} INFO - Processing /opt/airflow/dags/hook_dag.py took 0.048 seconds
+[2022-04-05 21:00:44,578] {processor.py:163} INFO - Started process (PID=208) to work on /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:00:44,579] {processor.py:642} INFO - Processing file /opt/airflow/dags/hook_dag.py for tasks to queue
+[2022-04-05 21:00:44,579] {logging_mixin.py:109} INFO - [2022-04-05 21:00:44,579] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:00:44,770] {logging_mixin.py:109} INFO - [2022-04-05 21:00:44,770] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: airflow, Login: airflow, Password: airflow, extra: {}
+[2022-04-05 21:00:44,784] {logging_mixin.py:109} INFO - [2022-04-05 21:00:44,784] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/hook_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/hook_dag.py", line 33, in <module>
+    hook_task = PythonOperator(task_id='hook_task', python_callable=get_activated_sources())
+  File "/opt/airflow/dags/hook_dag.py", line 21, in get_activated_sources
+    cursor.execute(request)
+psycopg2.errors.UndefinedTable: relation "course.source" does not exist
+LINE 1: SELECT * FROM course.source
+                      ^
+[2022-04-05 21:00:44,796] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:00:44,900] {processor.py:171} INFO - Processing /opt/airflow/dags/hook_dag.py took 0.325 seconds
+[2022-04-05 21:01:14,989] {processor.py:163} INFO - Started process (PID=233) to work on /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:01:14,991] {processor.py:642} INFO - Processing file /opt/airflow/dags/hook_dag.py for tasks to queue
+[2022-04-05 21:01:14,993] {logging_mixin.py:109} INFO - [2022-04-05 21:01:14,993] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:01:15,033] {logging_mixin.py:109} INFO - [2022-04-05 21:01:15,033] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: airflow, Login: airflow, Password: airflow, extra: {}
+[2022-04-05 21:01:15,039] {logging_mixin.py:109} INFO - [2022-04-05 21:01:15,038] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/hook_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/hook_dag.py", line 33, in <module>
+    hook_task = PythonOperator(task_id='hook_task', python_callable=get_activated_sources())
+  File "/opt/airflow/dags/hook_dag.py", line 21, in get_activated_sources
+    cursor.execute(request)
+psycopg2.errors.UndefinedTable: relation "course.source" does not exist
+LINE 1: SELECT * FROM course.source
+                      ^
+[2022-04-05 21:01:15,046] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:01:15,058] {processor.py:171} INFO - Processing /opt/airflow/dags/hook_dag.py took 0.079 seconds
+[2022-04-05 21:01:45,264] {processor.py:163} INFO - Started process (PID=268) to work on /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:01:45,266] {processor.py:642} INFO - Processing file /opt/airflow/dags/hook_dag.py for tasks to queue
+[2022-04-05 21:01:45,267] {logging_mixin.py:109} INFO - [2022-04-05 21:01:45,267] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:01:45,299] {logging_mixin.py:109} INFO - [2022-04-05 21:01:45,299] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: airflow, Login: airflow, Password: airflow, extra: {}
+[2022-04-05 21:01:45,304] {logging_mixin.py:109} INFO - [2022-04-05 21:01:45,303] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/hook_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/hook_dag.py", line 33, in <module>
+    hook_task = PythonOperator(task_id='hook_task', python_callable=get_activated_sources())
+  File "/opt/airflow/dags/hook_dag.py", line 21, in get_activated_sources
+    cursor.execute(request)
+psycopg2.errors.UndefinedTable: relation "course.source" does not exist
+LINE 1: SELECT * FROM course.source
+                      ^
+[2022-04-05 21:01:45,308] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:01:45,314] {processor.py:171} INFO - Processing /opt/airflow/dags/hook_dag.py took 0.056 seconds
+[2022-04-05 21:02:15,480] {processor.py:163} INFO - Started process (PID=294) to work on /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:02:15,484] {processor.py:642} INFO - Processing file /opt/airflow/dags/hook_dag.py for tasks to queue
+[2022-04-05 21:02:15,486] {logging_mixin.py:109} INFO - [2022-04-05 21:02:15,486] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:02:15,561] {logging_mixin.py:109} INFO - [2022-04-05 21:02:15,560] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: airflow, Login: airflow, Password: airflow, extra: {}
+[2022-04-05 21:02:15,568] {logging_mixin.py:109} INFO - [2022-04-05 21:02:15,567] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/hook_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/hook_dag.py", line 33, in <module>
+    hook_task = PythonOperator(task_id='hook_task', python_callable=get_activated_sources())
+  File "/opt/airflow/dags/hook_dag.py", line 21, in get_activated_sources
+    cursor.execute(request)
+psycopg2.errors.UndefinedTable: relation "course.source" does not exist
+LINE 1: SELECT * FROM course.source
+                      ^
+[2022-04-05 21:02:15,573] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:02:15,587] {processor.py:171} INFO - Processing /opt/airflow/dags/hook_dag.py took 0.116 seconds
+[2022-04-05 21:02:45,840] {processor.py:163} INFO - Started process (PID=327) to work on /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:02:45,842] {processor.py:642} INFO - Processing file /opt/airflow/dags/hook_dag.py for tasks to queue
+[2022-04-05 21:02:45,843] {logging_mixin.py:109} INFO - [2022-04-05 21:02:45,842] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:02:45,872] {logging_mixin.py:109} INFO - [2022-04-05 21:02:45,872] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: airflow, Login: airflow, Password: airflow, extra: {}
+[2022-04-05 21:02:45,876] {logging_mixin.py:109} INFO - [2022-04-05 21:02:45,875] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/hook_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/hook_dag.py", line 33, in <module>
+    hook_task = PythonOperator(task_id='hook_task', python_callable=get_activated_sources())
+  File "/opt/airflow/dags/hook_dag.py", line 21, in get_activated_sources
+    cursor.execute(request)
+psycopg2.errors.UndefinedTable: relation "course.source" does not exist
+LINE 1: SELECT * FROM course.source
+                      ^
+[2022-04-05 21:02:45,882] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:02:45,896] {processor.py:171} INFO - Processing /opt/airflow/dags/hook_dag.py took 0.067 seconds
+[2022-04-05 21:03:16,008] {processor.py:163} INFO - Started process (PID=351) to work on /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:03:16,008] {processor.py:642} INFO - Processing file /opt/airflow/dags/hook_dag.py for tasks to queue
+[2022-04-05 21:03:16,009] {logging_mixin.py:109} INFO - [2022-04-05 21:03:16,009] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:03:16,029] {logging_mixin.py:109} INFO - [2022-04-05 21:03:16,029] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: airflow, Login: airflow, Password: airflow, extra: {}
+[2022-04-05 21:03:16,033] {logging_mixin.py:109} INFO - [2022-04-05 21:03:16,032] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/hook_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/hook_dag.py", line 33, in <module>
+    hook_task = PythonOperator(task_id='hook_task', python_callable=get_activated_sources())
+  File "/opt/airflow/dags/hook_dag.py", line 21, in get_activated_sources
+    cursor.execute(request)
+psycopg2.errors.UndefinedTable: relation "course.source" does not exist
+LINE 1: SELECT * FROM course.source
+                      ^
+[2022-04-05 21:03:16,036] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:03:16,125] {processor.py:171} INFO - Processing /opt/airflow/dags/hook_dag.py took 0.119 seconds
+[2022-04-05 21:03:46,305] {processor.py:163} INFO - Started process (PID=390) to work on /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:03:46,306] {processor.py:642} INFO - Processing file /opt/airflow/dags/hook_dag.py for tasks to queue
+[2022-04-05 21:03:46,307] {logging_mixin.py:109} INFO - [2022-04-05 21:03:46,306] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:03:46,334] {logging_mixin.py:109} INFO - [2022-04-05 21:03:46,334] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: airflow, Login: airflow, Password: airflow, extra: {}
+[2022-04-05 21:03:46,339] {logging_mixin.py:109} INFO - [2022-04-05 21:03:46,338] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/hook_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/hook_dag.py", line 33, in <module>
+    hook_task = PythonOperator(task_id='hook_task', python_callable=get_activated_sources())
+  File "/opt/airflow/dags/hook_dag.py", line 21, in get_activated_sources
+    cursor.execute(request)
+psycopg2.errors.UndefinedTable: relation "course.source" does not exist
+LINE 1: SELECT * FROM course.source
+                      ^
+[2022-04-05 21:03:46,346] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:03:46,352] {processor.py:171} INFO - Processing /opt/airflow/dags/hook_dag.py took 0.051 seconds
+[2022-04-05 21:04:16,564] {processor.py:163} INFO - Started process (PID=414) to work on /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:04:16,567] {processor.py:642} INFO - Processing file /opt/airflow/dags/hook_dag.py for tasks to queue
+[2022-04-05 21:04:16,568] {logging_mixin.py:109} INFO - [2022-04-05 21:04:16,568] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:04:16,656] {logging_mixin.py:109} INFO - [2022-04-05 21:04:16,655] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: airflow, Login: airflow, Password: airflow, extra: {}
+[2022-04-05 21:04:16,664] {logging_mixin.py:109} INFO - [2022-04-05 21:04:16,663] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/hook_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/hook_dag.py", line 33, in <module>
+    hook_task = PythonOperator(task_id='hook_task', python_callable=get_activated_sources())
+  File "/opt/airflow/dags/hook_dag.py", line 21, in get_activated_sources
+    cursor.execute(request)
+psycopg2.errors.UndefinedTable: relation "course.source" does not exist
+LINE 1: SELECT * FROM course.source
+                      ^
+[2022-04-05 21:04:16,669] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:04:16,677] {processor.py:171} INFO - Processing /opt/airflow/dags/hook_dag.py took 0.122 seconds
+[2022-04-05 21:04:23,732] {processor.py:163} INFO - Started process (PID=424) to work on /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:04:23,735] {processor.py:642} INFO - Processing file /opt/airflow/dags/hook_dag.py for tasks to queue
+[2022-04-05 21:04:23,736] {logging_mixin.py:109} INFO - [2022-04-05 21:04:23,736] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:04:23,804] {logging_mixin.py:109} INFO - [2022-04-05 21:04:23,804] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: airflow, Login: airflow, Password: airflow, extra: {}
+[2022-04-05 21:04:23,808] {logging_mixin.py:109} INFO - Source: 1 - activated: Max
+[2022-04-05 21:04:23,808] {logging_mixin.py:109} INFO - Source: 2 - activated: Susie
+[2022-04-05 21:04:23,808] {logging_mixin.py:109} INFO - Source: 3 - activated: Lester
+[2022-04-05 21:04:23,809] {logging_mixin.py:109} INFO - Source: 4 - activated: Quincy
+[2022-04-05 21:04:23,842] {logging_mixin.py:109} INFO - [2022-04-05 21:04:23,809] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/hook_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/hook_dag.py", line 33, in <module>
+    hook_task = PythonOperator(task_id='hook_task', python_callable=get_activated_sources())
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 188, in apply_defaults
+    result = func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 160, in __init__
+    raise AirflowException('`python_callable` param must be callable')
+airflow.exceptions.AirflowException: `python_callable` param must be callable
+[2022-04-05 21:04:23,845] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:04:23,851] {processor.py:171} INFO - Processing /opt/airflow/dags/hook_dag.py took 0.128 seconds
+[2022-04-05 21:04:54,008] {processor.py:163} INFO - Started process (PID=448) to work on /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:04:54,009] {processor.py:642} INFO - Processing file /opt/airflow/dags/hook_dag.py for tasks to queue
+[2022-04-05 21:04:54,009] {logging_mixin.py:109} INFO - [2022-04-05 21:04:54,009] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:04:54,058] {logging_mixin.py:109} INFO - [2022-04-05 21:04:54,058] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: airflow, Login: airflow, Password: airflow, extra: {}
+[2022-04-05 21:04:54,066] {logging_mixin.py:109} INFO - Source: 1 - activated: Max
+[2022-04-05 21:04:54,066] {logging_mixin.py:109} INFO - Source: 2 - activated: Susie
+[2022-04-05 21:04:54,066] {logging_mixin.py:109} INFO - Source: 3 - activated: Lester
+[2022-04-05 21:04:54,066] {logging_mixin.py:109} INFO - Source: 4 - activated: Quincy
+[2022-04-05 21:04:54,069] {logging_mixin.py:109} INFO - [2022-04-05 21:04:54,068] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/hook_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/hook_dag.py", line 33, in <module>
+    hook_task = PythonOperator(task_id='hook_task', python_callable=get_activated_sources())
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 188, in apply_defaults
+    result = func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 160, in __init__
+    raise AirflowException('`python_callable` param must be callable')
+airflow.exceptions.AirflowException: `python_callable` param must be callable
+[2022-04-05 21:04:54,073] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:04:54,085] {processor.py:171} INFO - Processing /opt/airflow/dags/hook_dag.py took 0.080 seconds
+[2022-04-05 21:05:24,242] {processor.py:163} INFO - Started process (PID=482) to work on /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:05:24,245] {processor.py:642} INFO - Processing file /opt/airflow/dags/hook_dag.py for tasks to queue
+[2022-04-05 21:05:24,247] {logging_mixin.py:109} INFO - [2022-04-05 21:05:24,247] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:05:24,316] {logging_mixin.py:109} INFO - [2022-04-05 21:05:24,316] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: airflow, Login: airflow, Password: airflow, extra: {}
+[2022-04-05 21:05:24,322] {logging_mixin.py:109} INFO - Source: 1 - activated: Max
+[2022-04-05 21:05:24,322] {logging_mixin.py:109} INFO - Source: 2 - activated: Susie
+[2022-04-05 21:05:24,323] {logging_mixin.py:109} INFO - Source: 3 - activated: Lester
+[2022-04-05 21:05:24,323] {logging_mixin.py:109} INFO - Source: 4 - activated: Quincy
+[2022-04-05 21:05:24,325] {logging_mixin.py:109} INFO - [2022-04-05 21:05:24,323] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/hook_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/hook_dag.py", line 33, in <module>
+    hook_task = PythonOperator(task_id='hook_task', python_callable=get_activated_sources())
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 188, in apply_defaults
+    result = func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 160, in __init__
+    raise AirflowException('`python_callable` param must be callable')
+airflow.exceptions.AirflowException: `python_callable` param must be callable
+[2022-04-05 21:05:24,332] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:05:24,343] {processor.py:171} INFO - Processing /opt/airflow/dags/hook_dag.py took 0.109 seconds
+[2022-04-05 21:05:54,502] {processor.py:163} INFO - Started process (PID=518) to work on /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:05:54,503] {processor.py:642} INFO - Processing file /opt/airflow/dags/hook_dag.py for tasks to queue
+[2022-04-05 21:05:54,503] {logging_mixin.py:109} INFO - [2022-04-05 21:05:54,503] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:05:54,526] {logging_mixin.py:109} INFO - [2022-04-05 21:05:54,526] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: airflow, Login: airflow, Password: airflow, extra: {}
+[2022-04-05 21:05:54,530] {logging_mixin.py:109} INFO - Source: 1 - activated: Max
+[2022-04-05 21:05:54,530] {logging_mixin.py:109} INFO - Source: 2 - activated: Susie
+[2022-04-05 21:05:54,530] {logging_mixin.py:109} INFO - Source: 3 - activated: Lester
+[2022-04-05 21:05:54,530] {logging_mixin.py:109} INFO - Source: 4 - activated: Quincy
+[2022-04-05 21:05:54,532] {logging_mixin.py:109} INFO - [2022-04-05 21:05:54,531] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/hook_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/hook_dag.py", line 33, in <module>
+    hook_task = PythonOperator(task_id='hook_task', python_callable=get_activated_sources())
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 188, in apply_defaults
+    result = func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 160, in __init__
+    raise AirflowException('`python_callable` param must be callable')
+airflow.exceptions.AirflowException: `python_callable` param must be callable
+[2022-04-05 21:05:54,543] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:05:54,555] {processor.py:171} INFO - Processing /opt/airflow/dags/hook_dag.py took 0.055 seconds
+[2022-04-05 21:06:07,639] {processor.py:163} INFO - Started process (PID=532) to work on /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:06:07,639] {processor.py:642} INFO - Processing file /opt/airflow/dags/hook_dag.py for tasks to queue
+[2022-04-05 21:06:07,640] {logging_mixin.py:109} INFO - [2022-04-05 21:06:07,640] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:06:07,665] {logging_mixin.py:109} INFO - [2022-04-05 21:06:07,665] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: airflow, Login: airflow, Password: airflow, extra: {}
+[2022-04-05 21:06:07,668] {logging_mixin.py:109} INFO - Source: 1 - activated: Max
+[2022-04-05 21:06:07,668] {logging_mixin.py:109} INFO - Source: 2 - activated: Susie
+[2022-04-05 21:06:07,668] {logging_mixin.py:109} INFO - Source: 3 - activated: Lester
+[2022-04-05 21:06:07,668] {logging_mixin.py:109} INFO - Source: 4 - activated: Quincy
+[2022-04-05 21:06:07,670] {logging_mixin.py:109} INFO - [2022-04-05 21:06:07,669] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/hook_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/hook_dag.py", line 34, in <module>
+    hook_task = PythonOperator(task_id='hook_task', python_callable=get_activated_sources())
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 188, in apply_defaults
+    result = func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 160, in __init__
+    raise AirflowException('`python_callable` param must be callable')
+airflow.exceptions.AirflowException: `python_callable` param must be callable
+[2022-04-05 21:06:07,673] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:06:07,679] {processor.py:171} INFO - Processing /opt/airflow/dags/hook_dag.py took 0.043 seconds
+[2022-04-05 21:06:37,875] {processor.py:163} INFO - Started process (PID=557) to work on /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:06:37,877] {processor.py:642} INFO - Processing file /opt/airflow/dags/hook_dag.py for tasks to queue
+[2022-04-05 21:06:37,879] {logging_mixin.py:109} INFO - [2022-04-05 21:06:37,879] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:06:37,957] {logging_mixin.py:109} INFO - [2022-04-05 21:06:37,957] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: airflow, Login: airflow, Password: airflow, extra: {}
+[2022-04-05 21:06:37,971] {logging_mixin.py:109} INFO - Source: 1 - activated: Max
+[2022-04-05 21:06:37,972] {logging_mixin.py:109} INFO - Source: 2 - activated: Susie
+[2022-04-05 21:06:37,972] {logging_mixin.py:109} INFO - Source: 3 - activated: Lester
+[2022-04-05 21:06:37,972] {logging_mixin.py:109} INFO - Source: 4 - activated: Quincy
+[2022-04-05 21:06:37,977] {logging_mixin.py:109} INFO - [2022-04-05 21:06:37,973] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/hook_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/hook_dag.py", line 34, in <module>
+    hook_task = PythonOperator(task_id='hook_task', python_callable=get_activated_sources())
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 188, in apply_defaults
+    result = func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 160, in __init__
+    raise AirflowException('`python_callable` param must be callable')
+airflow.exceptions.AirflowException: `python_callable` param must be callable
+[2022-04-05 21:06:37,991] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:06:38,018] {processor.py:171} INFO - Processing /opt/airflow/dags/hook_dag.py took 0.152 seconds
+[2022-04-05 21:07:08,062] {processor.py:163} INFO - Started process (PID=592) to work on /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:07:08,066] {processor.py:642} INFO - Processing file /opt/airflow/dags/hook_dag.py for tasks to queue
+[2022-04-05 21:07:08,068] {logging_mixin.py:109} INFO - [2022-04-05 21:07:08,067] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:07:08,123] {logging_mixin.py:109} INFO - [2022-04-05 21:07:08,123] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: airflow, Login: airflow, Password: airflow, extra: {}
+[2022-04-05 21:07:08,134] {logging_mixin.py:109} INFO - Source: 1 - activated: Max
+[2022-04-05 21:07:08,134] {logging_mixin.py:109} INFO - Source: 2 - activated: Susie
+[2022-04-05 21:07:08,134] {logging_mixin.py:109} INFO - Source: 3 - activated: Lester
+[2022-04-05 21:07:08,134] {logging_mixin.py:109} INFO - Source: 4 - activated: Quincy
+[2022-04-05 21:07:08,135] {logging_mixin.py:109} INFO - [2022-04-05 21:07:08,134] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/hook_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/hook_dag.py", line 34, in <module>
+    hook_task = PythonOperator(task_id='hook_task', python_callable=get_activated_sources())
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 188, in apply_defaults
+    result = func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 160, in __init__
+    raise AirflowException('`python_callable` param must be callable')
+airflow.exceptions.AirflowException: `python_callable` param must be callable
+[2022-04-05 21:07:08,139] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:07:08,145] {processor.py:171} INFO - Processing /opt/airflow/dags/hook_dag.py took 0.094 seconds
+[2022-04-05 21:07:38,209] {processor.py:163} INFO - Started process (PID=620) to work on /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:07:38,210] {processor.py:642} INFO - Processing file /opt/airflow/dags/hook_dag.py for tasks to queue
+[2022-04-05 21:07:38,210] {logging_mixin.py:109} INFO - [2022-04-05 21:07:38,210] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:07:38,229] {logging_mixin.py:109} INFO - [2022-04-05 21:07:38,229] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: airflow, Login: airflow, Password: airflow, extra: {}
+[2022-04-05 21:07:38,232] {logging_mixin.py:109} INFO - Source: 1 - activated: Max
+[2022-04-05 21:07:38,232] {logging_mixin.py:109} INFO - Source: 2 - activated: Susie
+[2022-04-05 21:07:38,232] {logging_mixin.py:109} INFO - Source: 3 - activated: Lester
+[2022-04-05 21:07:38,232] {logging_mixin.py:109} INFO - Source: 4 - activated: Quincy
+[2022-04-05 21:07:38,234] {logging_mixin.py:109} INFO - [2022-04-05 21:07:38,233] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/hook_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/hook_dag.py", line 34, in <module>
+    hook_task = PythonOperator(task_id='hook_task', python_callable=get_activated_sources())
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 188, in apply_defaults
+    result = func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 160, in __init__
+    raise AirflowException('`python_callable` param must be callable')
+airflow.exceptions.AirflowException: `python_callable` param must be callable
+[2022-04-05 21:07:38,240] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:07:38,245] {processor.py:171} INFO - Processing /opt/airflow/dags/hook_dag.py took 0.038 seconds
+[2022-04-05 21:08:08,420] {processor.py:163} INFO - Started process (PID=657) to work on /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:08:08,422] {processor.py:642} INFO - Processing file /opt/airflow/dags/hook_dag.py for tasks to queue
+[2022-04-05 21:08:08,423] {logging_mixin.py:109} INFO - [2022-04-05 21:08:08,422] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:08:08,458] {logging_mixin.py:109} INFO - [2022-04-05 21:08:08,458] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: airflow, Login: airflow, Password: airflow, extra: {}
+[2022-04-05 21:08:08,468] {logging_mixin.py:109} INFO - Source: 1 - activated: Max
+[2022-04-05 21:08:08,468] {logging_mixin.py:109} INFO - Source: 2 - activated: Susie
+[2022-04-05 21:08:08,468] {logging_mixin.py:109} INFO - Source: 3 - activated: Lester
+[2022-04-05 21:08:08,468] {logging_mixin.py:109} INFO - Source: 4 - activated: Quincy
+[2022-04-05 21:08:08,470] {logging_mixin.py:109} INFO - [2022-04-05 21:08:08,469] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/hook_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/hook_dag.py", line 34, in <module>
+    hook_task = PythonOperator(task_id='hook_task', python_callable=get_activated_sources())
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 188, in apply_defaults
+    result = func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 160, in __init__
+    raise AirflowException('`python_callable` param must be callable')
+airflow.exceptions.AirflowException: `python_callable` param must be callable
+[2022-04-05 21:08:08,473] {processor.py:656} WARNING - No viable dags retrieved from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:08:08,481] {processor.py:171} INFO - Processing /opt/airflow/dags/hook_dag.py took 0.066 seconds
+[2022-04-05 21:08:16,439] {processor.py:163} INFO - Started process (PID=667) to work on /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:08:16,439] {processor.py:642} INFO - Processing file /opt/airflow/dags/hook_dag.py for tasks to queue
+[2022-04-05 21:08:16,440] {logging_mixin.py:109} INFO - [2022-04-05 21:08:16,440] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:08:16,478] {processor.py:654} INFO - DAG(s) dict_keys(['hook_dag']) retrieved from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:08:22,229] {logging_mixin.py:109} INFO - [2022-04-05 21:08:22,229] {manager.py:496} INFO - Created Permission View: can edit on DAG:hook_dag
+[2022-04-05 21:08:22,239] {logging_mixin.py:109} INFO - [2022-04-05 21:08:22,239] {manager.py:496} INFO - Created Permission View: can read on DAG:hook_dag
+[2022-04-05 21:08:22,239] {logging_mixin.py:109} INFO - [2022-04-05 21:08:22,239] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-04-05 21:08:22,245] {logging_mixin.py:109} INFO - [2022-04-05 21:08:22,245] {dag.py:2417} INFO - Creating ORM DAG for hook_dag
+[2022-04-05 21:08:22,252] {logging_mixin.py:109} INFO - [2022-04-05 21:08:22,252] {dag.py:2937} INFO - Setting next_dagrun for hook_dag to 2018-11-05T10:00:00+00:00
+[2022-04-05 21:08:22,300] {processor.py:171} INFO - Processing /opt/airflow/dags/hook_dag.py took 5.864 seconds
+[2022-04-05 21:08:52,794] {processor.py:163} INFO - Started process (PID=717) to work on /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:08:52,796] {processor.py:642} INFO - Processing file /opt/airflow/dags/hook_dag.py for tasks to queue
+[2022-04-05 21:08:52,796] {logging_mixin.py:109} INFO - [2022-04-05 21:08:52,796] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:08:52,823] {processor.py:654} INFO - DAG(s) dict_keys(['hook_dag']) retrieved from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:08:52,831] {logging_mixin.py:109} INFO - [2022-04-05 21:08:52,831] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-04-05 21:08:52,844] {logging_mixin.py:109} INFO - [2022-04-05 21:08:52,844] {dag.py:2937} INFO - Setting next_dagrun for hook_dag to None
+[2022-04-05 21:08:52,853] {processor.py:171} INFO - Processing /opt/airflow/dags/hook_dag.py took 0.062 seconds
+[2022-04-05 21:09:23,032] {processor.py:163} INFO - Started process (PID=741) to work on /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:09:23,036] {processor.py:642} INFO - Processing file /opt/airflow/dags/hook_dag.py for tasks to queue
+[2022-04-05 21:09:23,038] {logging_mixin.py:109} INFO - [2022-04-05 21:09:23,037] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:09:23,141] {processor.py:654} INFO - DAG(s) dict_keys(['hook_dag']) retrieved from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:09:23,154] {logging_mixin.py:109} INFO - [2022-04-05 21:09:23,154] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-04-05 21:09:23,172] {logging_mixin.py:109} INFO - [2022-04-05 21:09:23,172] {dag.py:2937} INFO - Setting next_dagrun for hook_dag to None
+[2022-04-05 21:09:23,181] {processor.py:171} INFO - Processing /opt/airflow/dags/hook_dag.py took 0.159 seconds
+[2022-04-05 21:09:53,311] {processor.py:163} INFO - Started process (PID=779) to work on /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:09:53,314] {processor.py:642} INFO - Processing file /opt/airflow/dags/hook_dag.py for tasks to queue
+[2022-04-05 21:09:53,315] {logging_mixin.py:109} INFO - [2022-04-05 21:09:53,315] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:09:53,361] {processor.py:654} INFO - DAG(s) dict_keys(['hook_dag']) retrieved from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:09:53,371] {logging_mixin.py:109} INFO - [2022-04-05 21:09:53,370] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-04-05 21:09:53,387] {logging_mixin.py:109} INFO - [2022-04-05 21:09:53,387] {dag.py:2937} INFO - Setting next_dagrun for hook_dag to None
+[2022-04-05 21:09:53,399] {processor.py:171} INFO - Processing /opt/airflow/dags/hook_dag.py took 0.096 seconds
+[2022-04-05 21:10:23,551] {processor.py:163} INFO - Started process (PID=805) to work on /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:10:23,552] {processor.py:642} INFO - Processing file /opt/airflow/dags/hook_dag.py for tasks to queue
+[2022-04-05 21:10:23,553] {logging_mixin.py:109} INFO - [2022-04-05 21:10:23,553] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:10:23,578] {processor.py:654} INFO - DAG(s) dict_keys(['hook_dag']) retrieved from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:10:23,585] {logging_mixin.py:109} INFO - [2022-04-05 21:10:23,584] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-04-05 21:10:23,596] {logging_mixin.py:109} INFO - [2022-04-05 21:10:23,596] {dag.py:2937} INFO - Setting next_dagrun for hook_dag to None
+[2022-04-05 21:10:23,602] {processor.py:171} INFO - Processing /opt/airflow/dags/hook_dag.py took 0.053 seconds
+[2022-04-05 21:10:53,722] {processor.py:163} INFO - Started process (PID=845) to work on /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:10:53,723] {processor.py:642} INFO - Processing file /opt/airflow/dags/hook_dag.py for tasks to queue
+[2022-04-05 21:10:53,723] {logging_mixin.py:109} INFO - [2022-04-05 21:10:53,723] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:10:53,757] {processor.py:654} INFO - DAG(s) dict_keys(['hook_dag']) retrieved from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:10:53,764] {logging_mixin.py:109} INFO - [2022-04-05 21:10:53,763] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-04-05 21:10:53,776] {logging_mixin.py:109} INFO - [2022-04-05 21:10:53,776] {dag.py:2937} INFO - Setting next_dagrun for hook_dag to None
+[2022-04-05 21:10:53,783] {processor.py:171} INFO - Processing /opt/airflow/dags/hook_dag.py took 0.063 seconds
+[2022-04-05 21:11:24,148] {processor.py:163} INFO - Started process (PID=870) to work on /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:11:24,151] {processor.py:642} INFO - Processing file /opt/airflow/dags/hook_dag.py for tasks to queue
+[2022-04-05 21:11:24,151] {logging_mixin.py:109} INFO - [2022-04-05 21:11:24,151] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:11:24,185] {processor.py:654} INFO - DAG(s) dict_keys(['hook_dag']) retrieved from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:11:24,192] {logging_mixin.py:109} INFO - [2022-04-05 21:11:24,191] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-04-05 21:11:24,204] {logging_mixin.py:109} INFO - [2022-04-05 21:11:24,203] {dag.py:2937} INFO - Setting next_dagrun for hook_dag to None
+[2022-04-05 21:11:24,209] {processor.py:171} INFO - Processing /opt/airflow/dags/hook_dag.py took 0.066 seconds
+[2022-04-05 21:11:26,222] {processor.py:163} INFO - Started process (PID=871) to work on /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:11:26,224] {processor.py:642} INFO - Processing file /opt/airflow/dags/hook_dag.py for tasks to queue
+[2022-04-05 21:11:26,226] {logging_mixin.py:109} INFO - [2022-04-05 21:11:26,226] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:11:26,294] {processor.py:654} INFO - DAG(s) dict_keys(['hook_dag']) retrieved from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:11:26,304] {logging_mixin.py:109} INFO - [2022-04-05 21:11:26,304] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-04-05 21:11:26,321] {logging_mixin.py:109} INFO - [2022-04-05 21:11:26,321] {dag.py:2937} INFO - Setting next_dagrun for hook_dag to None
+[2022-04-05 21:11:26,334] {processor.py:171} INFO - Processing /opt/airflow/dags/hook_dag.py took 0.121 seconds
+[2022-04-05 21:11:56,480] {processor.py:163} INFO - Started process (PID=907) to work on /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:11:56,484] {processor.py:642} INFO - Processing file /opt/airflow/dags/hook_dag.py for tasks to queue
+[2022-04-05 21:11:56,486] {logging_mixin.py:109} INFO - [2022-04-05 21:11:56,485] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:11:56,539] {processor.py:654} INFO - DAG(s) dict_keys(['hook_dag']) retrieved from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:11:56,550] {logging_mixin.py:109} INFO - [2022-04-05 21:11:56,550] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-04-05 21:11:56,564] {logging_mixin.py:109} INFO - [2022-04-05 21:11:56,564] {dag.py:2937} INFO - Setting next_dagrun for hook_dag to None
+[2022-04-05 21:11:56,572] {processor.py:171} INFO - Processing /opt/airflow/dags/hook_dag.py took 0.103 seconds
+[2022-04-05 21:12:24,693] {processor.py:163} INFO - Started process (PID=934) to work on /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:12:24,694] {processor.py:642} INFO - Processing file /opt/airflow/dags/hook_dag.py for tasks to queue
+[2022-04-05 21:12:24,694] {logging_mixin.py:109} INFO - [2022-04-05 21:12:24,694] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:12:24,719] {processor.py:654} INFO - DAG(s) dict_keys(['hook_dag']) retrieved from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:12:24,726] {logging_mixin.py:109} INFO - [2022-04-05 21:12:24,726] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-04-05 21:12:24,737] {logging_mixin.py:109} INFO - [2022-04-05 21:12:24,737] {dag.py:2937} INFO - Setting next_dagrun for hook_dag to None
+[2022-04-05 21:12:24,744] {processor.py:171} INFO - Processing /opt/airflow/dags/hook_dag.py took 0.053 seconds
+[2022-04-05 21:12:54,840] {processor.py:163} INFO - Started process (PID=974) to work on /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:12:54,841] {processor.py:642} INFO - Processing file /opt/airflow/dags/hook_dag.py for tasks to queue
+[2022-04-05 21:12:54,841] {logging_mixin.py:109} INFO - [2022-04-05 21:12:54,841] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:12:54,866] {processor.py:654} INFO - DAG(s) dict_keys(['hook_dag']) retrieved from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:12:54,873] {logging_mixin.py:109} INFO - [2022-04-05 21:12:54,873] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-04-05 21:12:54,886] {logging_mixin.py:109} INFO - [2022-04-05 21:12:54,886] {dag.py:2937} INFO - Setting next_dagrun for hook_dag to None
+[2022-04-05 21:12:54,891] {processor.py:171} INFO - Processing /opt/airflow/dags/hook_dag.py took 0.053 seconds
+[2022-04-05 21:13:25,077] {processor.py:163} INFO - Started process (PID=997) to work on /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:13:25,081] {processor.py:642} INFO - Processing file /opt/airflow/dags/hook_dag.py for tasks to queue
+[2022-04-05 21:13:25,083] {logging_mixin.py:109} INFO - [2022-04-05 21:13:25,083] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:13:25,179] {processor.py:654} INFO - DAG(s) dict_keys(['hook_dag']) retrieved from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:13:25,197] {logging_mixin.py:109} INFO - [2022-04-05 21:13:25,197] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-04-05 21:13:25,226] {logging_mixin.py:109} INFO - [2022-04-05 21:13:25,226] {dag.py:2937} INFO - Setting next_dagrun for hook_dag to None
+[2022-04-05 21:13:25,239] {processor.py:171} INFO - Processing /opt/airflow/dags/hook_dag.py took 0.173 seconds
+[2022-04-05 21:13:35,140] {processor.py:163} INFO - Started process (PID=1009) to work on /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:13:35,140] {processor.py:642} INFO - Processing file /opt/airflow/dags/hook_dag.py for tasks to queue
+[2022-04-05 21:13:35,141] {logging_mixin.py:109} INFO - [2022-04-05 21:13:35,141] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:13:35,168] {processor.py:654} INFO - DAG(s) dict_keys(['hook_dag']) retrieved from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:13:35,178] {logging_mixin.py:109} INFO - [2022-04-05 21:13:35,178] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-04-05 21:13:35,195] {logging_mixin.py:109} INFO - [2022-04-05 21:13:35,195] {dag.py:2937} INFO - Setting next_dagrun for hook_dag to None
+[2022-04-05 21:13:35,210] {processor.py:171} INFO - Processing /opt/airflow/dags/hook_dag.py took 0.073 seconds
+[2022-04-05 21:13:43,240] {processor.py:163} INFO - Started process (PID=1022) to work on /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:13:43,241] {processor.py:642} INFO - Processing file /opt/airflow/dags/hook_dag.py for tasks to queue
+[2022-04-05 21:13:43,242] {logging_mixin.py:109} INFO - [2022-04-05 21:13:43,242] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:13:43,265] {processor.py:654} INFO - DAG(s) dict_keys(['hook_dag']) retrieved from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:13:43,272] {logging_mixin.py:109} INFO - [2022-04-05 21:13:43,272] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-04-05 21:13:43,283] {logging_mixin.py:109} INFO - [2022-04-05 21:13:43,283] {dag.py:2937} INFO - Setting next_dagrun for hook_dag to None
+[2022-04-05 21:13:43,290] {processor.py:171} INFO - Processing /opt/airflow/dags/hook_dag.py took 0.052 seconds
+[2022-04-05 21:14:13,423] {processor.py:163} INFO - Started process (PID=1043) to work on /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:14:13,427] {processor.py:642} INFO - Processing file /opt/airflow/dags/hook_dag.py for tasks to queue
+[2022-04-05 21:14:13,430] {logging_mixin.py:109} INFO - [2022-04-05 21:14:13,429] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:14:13,489] {processor.py:654} INFO - DAG(s) dict_keys(['hook_dag']) retrieved from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:14:13,498] {logging_mixin.py:109} INFO - [2022-04-05 21:14:13,498] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-04-05 21:14:13,513] {logging_mixin.py:109} INFO - [2022-04-05 21:14:13,513] {dag.py:2937} INFO - Setting next_dagrun for hook_dag to None
+[2022-04-05 21:14:13,522] {processor.py:171} INFO - Processing /opt/airflow/dags/hook_dag.py took 0.109 seconds
+[2022-04-05 21:14:43,869] {processor.py:163} INFO - Started process (PID=1076) to work on /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:14:43,871] {processor.py:642} INFO - Processing file /opt/airflow/dags/hook_dag.py for tasks to queue
+[2022-04-05 21:14:43,873] {logging_mixin.py:109} INFO - [2022-04-05 21:14:43,873] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:14:43,962] {processor.py:654} INFO - DAG(s) dict_keys(['hook_dag']) retrieved from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:14:43,974] {logging_mixin.py:109} INFO - [2022-04-05 21:14:43,974] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-04-05 21:14:43,988] {logging_mixin.py:109} INFO - [2022-04-05 21:14:43,988] {dag.py:2937} INFO - Setting next_dagrun for hook_dag to None
+[2022-04-05 21:14:43,995] {processor.py:171} INFO - Processing /opt/airflow/dags/hook_dag.py took 0.135 seconds
+[2022-04-05 21:15:14,297] {processor.py:163} INFO - Started process (PID=1115) to work on /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:15:14,298] {processor.py:642} INFO - Processing file /opt/airflow/dags/hook_dag.py for tasks to queue
+[2022-04-05 21:15:14,298] {logging_mixin.py:109} INFO - [2022-04-05 21:15:14,298] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:15:14,344] {processor.py:654} INFO - DAG(s) dict_keys(['hook_dag']) retrieved from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:15:14,352] {logging_mixin.py:109} INFO - [2022-04-05 21:15:14,352] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-04-05 21:15:14,382] {logging_mixin.py:109} INFO - [2022-04-05 21:15:14,382] {dag.py:2937} INFO - Setting next_dagrun for hook_dag to None
+[2022-04-05 21:15:14,389] {processor.py:171} INFO - Processing /opt/airflow/dags/hook_dag.py took 0.095 seconds
+[2022-04-05 21:15:36,633] {processor.py:163} INFO - Started process (PID=1131) to work on /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:15:36,633] {processor.py:642} INFO - Processing file /opt/airflow/dags/hook_dag.py for tasks to queue
+[2022-04-05 21:15:36,634] {logging_mixin.py:109} INFO - [2022-04-05 21:15:36,634] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:15:36,666] {processor.py:654} INFO - DAG(s) dict_keys(['hook_dag']) retrieved from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:15:36,673] {logging_mixin.py:109} INFO - [2022-04-05 21:15:36,673] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-04-05 21:15:36,686] {logging_mixin.py:109} INFO - [2022-04-05 21:15:36,686] {dag.py:2937} INFO - Setting next_dagrun for hook_dag to None
+[2022-04-05 21:15:36,698] {processor.py:171} INFO - Processing /opt/airflow/dags/hook_dag.py took 0.068 seconds
+[2022-04-05 21:16:06,856] {processor.py:163} INFO - Started process (PID=1168) to work on /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:16:06,859] {processor.py:642} INFO - Processing file /opt/airflow/dags/hook_dag.py for tasks to queue
+[2022-04-05 21:16:06,861] {logging_mixin.py:109} INFO - [2022-04-05 21:16:06,860] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:16:06,932] {processor.py:654} INFO - DAG(s) dict_keys(['hook_dag']) retrieved from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:16:06,943] {logging_mixin.py:109} INFO - [2022-04-05 21:16:06,943] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-04-05 21:16:06,964] {logging_mixin.py:109} INFO - [2022-04-05 21:16:06,964] {dag.py:2937} INFO - Setting next_dagrun for hook_dag to None
+[2022-04-05 21:16:06,973] {processor.py:171} INFO - Processing /opt/airflow/dags/hook_dag.py took 0.127 seconds
+[2022-04-05 21:16:14,019] {processor.py:163} INFO - Started process (PID=1177) to work on /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:16:14,019] {processor.py:642} INFO - Processing file /opt/airflow/dags/hook_dag.py for tasks to queue
+[2022-04-05 21:16:14,020] {logging_mixin.py:109} INFO - [2022-04-05 21:16:14,020] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:16:14,042] {processor.py:654} INFO - DAG(s) dict_keys(['hook_dag']) retrieved from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:16:14,051] {logging_mixin.py:109} INFO - [2022-04-05 21:16:14,051] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-04-05 21:16:14,063] {logging_mixin.py:109} INFO - [2022-04-05 21:16:14,063] {dag.py:2937} INFO - Setting next_dagrun for hook_dag to None
+[2022-04-05 21:16:14,070] {processor.py:171} INFO - Processing /opt/airflow/dags/hook_dag.py took 0.054 seconds
+[2022-04-05 21:16:33,177] {processor.py:163} INFO - Started process (PID=1199) to work on /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:16:33,178] {processor.py:642} INFO - Processing file /opt/airflow/dags/hook_dag.py for tasks to queue
+[2022-04-05 21:16:33,178] {logging_mixin.py:109} INFO - [2022-04-05 21:16:33,178] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:16:33,200] {processor.py:654} INFO - DAG(s) dict_keys(['hook_dag']) retrieved from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:16:33,207] {logging_mixin.py:109} INFO - [2022-04-05 21:16:33,207] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-04-05 21:16:33,219] {logging_mixin.py:109} INFO - [2022-04-05 21:16:33,218] {dag.py:2937} INFO - Setting next_dagrun for hook_dag to None
+[2022-04-05 21:16:33,225] {processor.py:171} INFO - Processing /opt/airflow/dags/hook_dag.py took 0.050 seconds
+[2022-04-05 21:16:56,331] {processor.py:163} INFO - Started process (PID=1223) to work on /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:16:56,332] {processor.py:642} INFO - Processing file /opt/airflow/dags/hook_dag.py for tasks to queue
+[2022-04-05 21:16:56,333] {logging_mixin.py:109} INFO - [2022-04-05 21:16:56,333] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:16:56,365] {processor.py:654} INFO - DAG(s) dict_keys(['hook_dag']) retrieved from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:16:56,376] {logging_mixin.py:109} INFO - [2022-04-05 21:16:56,376] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-04-05 21:16:56,388] {logging_mixin.py:109} INFO - [2022-04-05 21:16:56,388] {dag.py:2937} INFO - Setting next_dagrun for hook_dag to None
+[2022-04-05 21:16:56,396] {processor.py:171} INFO - Processing /opt/airflow/dags/hook_dag.py took 0.067 seconds
+[2022-04-05 21:17:21,453] {processor.py:163} INFO - Started process (PID=1251) to work on /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:17:21,453] {processor.py:642} INFO - Processing file /opt/airflow/dags/hook_dag.py for tasks to queue
+[2022-04-05 21:17:21,454] {logging_mixin.py:109} INFO - [2022-04-05 21:17:21,454] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:17:21,478] {processor.py:654} INFO - DAG(s) dict_keys(['hook_dag']) retrieved from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:17:21,485] {logging_mixin.py:109} INFO - [2022-04-05 21:17:21,485] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-04-05 21:17:21,503] {logging_mixin.py:109} INFO - [2022-04-05 21:17:21,503] {dag.py:2937} INFO - Setting next_dagrun for hook_dag to None
+[2022-04-05 21:17:21,510] {processor.py:171} INFO - Processing /opt/airflow/dags/hook_dag.py took 0.060 seconds
+[2022-04-05 21:17:51,700] {processor.py:163} INFO - Started process (PID=1288) to work on /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:17:51,702] {processor.py:642} INFO - Processing file /opt/airflow/dags/hook_dag.py for tasks to queue
+[2022-04-05 21:17:51,702] {logging_mixin.py:109} INFO - [2022-04-05 21:17:51,702] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:17:51,769] {processor.py:654} INFO - DAG(s) dict_keys(['hook_dag']) retrieved from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:17:51,777] {logging_mixin.py:109} INFO - [2022-04-05 21:17:51,777] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-04-05 21:17:51,788] {logging_mixin.py:109} INFO - [2022-04-05 21:17:51,788] {dag.py:2937} INFO - Setting next_dagrun for hook_dag to None
+[2022-04-05 21:17:51,794] {processor.py:171} INFO - Processing /opt/airflow/dags/hook_dag.py took 0.104 seconds
+[2022-04-05 21:18:16,885] {processor.py:163} INFO - Started process (PID=1311) to work on /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:18:16,886] {processor.py:642} INFO - Processing file /opt/airflow/dags/hook_dag.py for tasks to queue
+[2022-04-05 21:18:16,887] {logging_mixin.py:109} INFO - [2022-04-05 21:18:16,887] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:18:16,934] {processor.py:654} INFO - DAG(s) dict_keys(['hook_dag']) retrieved from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:18:16,941] {logging_mixin.py:109} INFO - [2022-04-05 21:18:16,941] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-04-05 21:18:16,953] {logging_mixin.py:109} INFO - [2022-04-05 21:18:16,953] {dag.py:2937} INFO - Setting next_dagrun for hook_dag to None
+[2022-04-05 21:18:16,961] {processor.py:171} INFO - Processing /opt/airflow/dags/hook_dag.py took 0.080 seconds
+[2022-04-05 21:18:29,072] {processor.py:163} INFO - Started process (PID=1326) to work on /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:18:29,074] {processor.py:642} INFO - Processing file /opt/airflow/dags/hook_dag.py for tasks to queue
+[2022-04-05 21:18:29,075] {logging_mixin.py:109} INFO - [2022-04-05 21:18:29,075] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:18:29,111] {processor.py:654} INFO - DAG(s) dict_keys(['hook_dag']) retrieved from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:18:29,118] {logging_mixin.py:109} INFO - [2022-04-05 21:18:29,118] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-04-05 21:18:29,129] {logging_mixin.py:109} INFO - [2022-04-05 21:18:29,129] {dag.py:2937} INFO - Setting next_dagrun for hook_dag to None
+[2022-04-05 21:18:29,144] {processor.py:171} INFO - Processing /opt/airflow/dags/hook_dag.py took 0.079 seconds
+[2022-04-05 21:18:59,294] {processor.py:163} INFO - Started process (PID=1350) to work on /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:18:59,297] {processor.py:642} INFO - Processing file /opt/airflow/dags/hook_dag.py for tasks to queue
+[2022-04-05 21:18:59,298] {logging_mixin.py:109} INFO - [2022-04-05 21:18:59,298] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:18:59,379] {processor.py:654} INFO - DAG(s) dict_keys(['hook_dag']) retrieved from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:18:59,390] {logging_mixin.py:109} INFO - [2022-04-05 21:18:59,390] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-04-05 21:18:59,406] {logging_mixin.py:109} INFO - [2022-04-05 21:18:59,406] {dag.py:2937} INFO - Setting next_dagrun for hook_dag to None
+[2022-04-05 21:18:59,413] {processor.py:171} INFO - Processing /opt/airflow/dags/hook_dag.py took 0.127 seconds
+[2022-04-05 21:19:29,477] {processor.py:163} INFO - Started process (PID=1388) to work on /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:19:29,478] {processor.py:642} INFO - Processing file /opt/airflow/dags/hook_dag.py for tasks to queue
+[2022-04-05 21:19:29,478] {logging_mixin.py:109} INFO - [2022-04-05 21:19:29,478] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:19:29,504] {processor.py:654} INFO - DAG(s) dict_keys(['hook_dag']) retrieved from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:19:29,512] {logging_mixin.py:109} INFO - [2022-04-05 21:19:29,512] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-04-05 21:19:29,524] {logging_mixin.py:109} INFO - [2022-04-05 21:19:29,524] {dag.py:2937} INFO - Setting next_dagrun for hook_dag to None
+[2022-04-05 21:19:29,532] {processor.py:171} INFO - Processing /opt/airflow/dags/hook_dag.py took 0.057 seconds
+[2022-04-05 21:19:59,639] {processor.py:163} INFO - Started process (PID=1425) to work on /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:19:59,641] {processor.py:642} INFO - Processing file /opt/airflow/dags/hook_dag.py for tasks to queue
+[2022-04-05 21:19:59,641] {logging_mixin.py:109} INFO - [2022-04-05 21:19:59,641] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:19:59,677] {processor.py:654} INFO - DAG(s) dict_keys(['hook_dag']) retrieved from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:19:59,684] {logging_mixin.py:109} INFO - [2022-04-05 21:19:59,684] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-04-05 21:19:59,703] {logging_mixin.py:109} INFO - [2022-04-05 21:19:59,703] {dag.py:2937} INFO - Setting next_dagrun for hook_dag to None
+[2022-04-05 21:19:59,710] {processor.py:171} INFO - Processing /opt/airflow/dags/hook_dag.py took 0.073 seconds
+[2022-04-05 21:20:29,780] {processor.py:163} INFO - Started process (PID=1449) to work on /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:20:29,781] {processor.py:642} INFO - Processing file /opt/airflow/dags/hook_dag.py for tasks to queue
+[2022-04-05 21:20:29,781] {logging_mixin.py:109} INFO - [2022-04-05 21:20:29,781] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:20:29,804] {processor.py:654} INFO - DAG(s) dict_keys(['hook_dag']) retrieved from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:20:29,811] {logging_mixin.py:109} INFO - [2022-04-05 21:20:29,811] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-04-05 21:20:29,823] {logging_mixin.py:109} INFO - [2022-04-05 21:20:29,823] {dag.py:2937} INFO - Setting next_dagrun for hook_dag to None
+[2022-04-05 21:20:29,829] {processor.py:171} INFO - Processing /opt/airflow/dags/hook_dag.py took 0.051 seconds
+[2022-04-05 21:21:00,056] {processor.py:163} INFO - Started process (PID=1484) to work on /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:21:00,057] {processor.py:642} INFO - Processing file /opt/airflow/dags/hook_dag.py for tasks to queue
+[2022-04-05 21:21:00,058] {logging_mixin.py:109} INFO - [2022-04-05 21:21:00,058] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:21:00,081] {processor.py:654} INFO - DAG(s) dict_keys(['hook_dag']) retrieved from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:21:00,090] {logging_mixin.py:109} INFO - [2022-04-05 21:21:00,090] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-04-05 21:21:00,102] {logging_mixin.py:109} INFO - [2022-04-05 21:21:00,102] {dag.py:2937} INFO - Setting next_dagrun for hook_dag to None
+[2022-04-05 21:21:00,165] {processor.py:171} INFO - Processing /opt/airflow/dags/hook_dag.py took 0.111 seconds
+[2022-04-05 21:21:30,235] {processor.py:163} INFO - Started process (PID=1512) to work on /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:21:30,237] {processor.py:642} INFO - Processing file /opt/airflow/dags/hook_dag.py for tasks to queue
+[2022-04-05 21:21:30,238] {logging_mixin.py:109} INFO - [2022-04-05 21:21:30,238] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:21:30,265] {processor.py:654} INFO - DAG(s) dict_keys(['hook_dag']) retrieved from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:21:30,272] {logging_mixin.py:109} INFO - [2022-04-05 21:21:30,272] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-04-05 21:21:30,289] {logging_mixin.py:109} INFO - [2022-04-05 21:21:30,288] {dag.py:2937} INFO - Setting next_dagrun for hook_dag to None
+[2022-04-05 21:21:30,297] {processor.py:171} INFO - Processing /opt/airflow/dags/hook_dag.py took 0.063 seconds
+[2022-04-05 21:22:00,404] {processor.py:163} INFO - Started process (PID=1552) to work on /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:22:00,405] {processor.py:642} INFO - Processing file /opt/airflow/dags/hook_dag.py for tasks to queue
+[2022-04-05 21:22:00,405] {logging_mixin.py:109} INFO - [2022-04-05 21:22:00,405] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:22:00,428] {processor.py:654} INFO - DAG(s) dict_keys(['hook_dag']) retrieved from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:22:00,435] {logging_mixin.py:109} INFO - [2022-04-05 21:22:00,434] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-04-05 21:22:00,446] {logging_mixin.py:109} INFO - [2022-04-05 21:22:00,446] {dag.py:2937} INFO - Setting next_dagrun for hook_dag to None
+[2022-04-05 21:22:00,452] {processor.py:171} INFO - Processing /opt/airflow/dags/hook_dag.py took 0.050 seconds
+[2022-04-05 21:22:30,741] {processor.py:163} INFO - Started process (PID=1575) to work on /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:22:30,742] {processor.py:642} INFO - Processing file /opt/airflow/dags/hook_dag.py for tasks to queue
+[2022-04-05 21:22:30,742] {logging_mixin.py:109} INFO - [2022-04-05 21:22:30,742] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:22:30,763] {processor.py:654} INFO - DAG(s) dict_keys(['hook_dag']) retrieved from /opt/airflow/dags/hook_dag.py
+[2022-04-05 21:22:30,769] {logging_mixin.py:109} INFO - [2022-04-05 21:22:30,769] {dag.py:2398} INFO - Sync 1 DAGs
+[2022-04-05 21:22:30,781] {logging_mixin.py:109} INFO - [2022-04-05 21:22:30,781] {dag.py:2937} INFO - Setting next_dagrun for hook_dag to None
+[2022-04-05 21:22:30,802] {processor.py:171} INFO - Processing /opt/airflow/dags/hook_dag.py took 0.063 seconds

@@ -1,0 +1,24 @@
+[2022-04-19 15:34:58,439] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: hook_dag.branching manual__2022-04-19T15:33:50.288526+00:00 [queued]>
+[2022-04-19 15:34:58,448] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: hook_dag.branching manual__2022-04-19T15:33:50.288526+00:00 [queued]>
+[2022-04-19 15:34:58,448] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-19 15:34:58,448] {taskinstance.py:1244} INFO - Starting attempt 1 of 2
+[2022-04-19 15:34:58,448] {taskinstance.py:1245} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-19 15:34:58,455] {taskinstance.py:1264} INFO - Executing <Task(BranchPythonOperator): branching> on 2022-04-19 15:33:50.288526+00:00
+[2022-04-19 15:34:58,459] {standard_task_runner.py:52} INFO - Started process 20320 to run task
+[2022-04-19 15:34:58,462] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'hook_dag', 'branching', 'manual__2022-04-19T15:33:50.288526+00:00', '--job-id', '559', '--raw', '--subdir', 'DAGS_FOLDER/hook_dag.py', '--cfg-path', '/tmp/tmput3jkhig', '--error-file', '/tmp/tmpo4saf5qx']
+[2022-04-19 15:34:58,462] {standard_task_runner.py:77} INFO - Job 559: Subtask branching
+[2022-04-19 15:34:58,508] {logging_mixin.py:109} INFO - Running <TaskInstance: hook_dag.branching manual__2022-04-19T15:33:50.288526+00:00 [running]> on host 22e04adb6bfa
+[2022-04-19 15:34:58,546] {taskinstance.py:1431} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=hook_dag
+AIRFLOW_CTX_TASK_ID=branching
+AIRFLOW_CTX_EXECUTION_DATE=2022-04-19T15:33:50.288526+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-04-19T15:33:50.288526+00:00
+[2022-04-19 15:34:58,552] {python.py:175} INFO - Done. Returned value was: transfer_suit_pa
+[2022-04-19 15:34:58,552] {skipmixin.py:140} INFO - Following branch transfer_suit_pa
+[2022-04-19 15:34:58,552] {skipmixin.py:171} INFO - Skipping tasks ['log_end_no_data_2']
+[2022-04-19 15:34:58,584] {taskinstance.py:1282} INFO - Marking task as SUCCESS. dag_id=hook_dag, task_id=branching, execution_date=20220419T153350, start_date=20220419T153458, end_date=20220419T153458
+[2022-04-19 15:34:58,633] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-04-19 15:34:58,660] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check

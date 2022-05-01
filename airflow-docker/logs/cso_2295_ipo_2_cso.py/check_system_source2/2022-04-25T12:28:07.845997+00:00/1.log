@@ -1,0 +1,24 @@
+[2022-04-25 12:29:25,085] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: cso_2295_ipo_2_cso.py.check_system_source2 manual__2022-04-25T12:28:07.845997+00:00 [queued]>
+[2022-04-25 12:29:25,092] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: cso_2295_ipo_2_cso.py.check_system_source2 manual__2022-04-25T12:28:07.845997+00:00 [queued]>
+[2022-04-25 12:29:25,093] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-25 12:29:25,093] {taskinstance.py:1244} INFO - Starting attempt 1 of 1
+[2022-04-25 12:29:25,093] {taskinstance.py:1245} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-25 12:29:25,112] {taskinstance.py:1264} INFO - Executing <Task(BranchPythonOperator): check_system_source2> on 2022-04-25 12:28:07.845997+00:00
+[2022-04-25 12:29:25,117] {standard_task_runner.py:52} INFO - Started process 13358 to run task
+[2022-04-25 12:29:25,119] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'cso_2295_ipo_2_cso.py', 'check_system_source2', 'manual__2022-04-25T12:28:07.845997+00:00', '--job-id', '1230', '--raw', '--subdir', 'DAGS_FOLDER/cso_2295/cso_2295_ipo_2_cso.py', '--cfg-path', '/tmp/tmpxywc1y4z', '--error-file', '/tmp/tmp2jj3kc0l']
+[2022-04-25 12:29:25,120] {standard_task_runner.py:77} INFO - Job 1230: Subtask check_system_source2
+[2022-04-25 12:29:25,174] {logging_mixin.py:109} INFO - Running <TaskInstance: cso_2295_ipo_2_cso.py.check_system_source2 manual__2022-04-25T12:28:07.845997+00:00 [running]> on host 22e04adb6bfa
+[2022-04-25 12:29:25,210] {taskinstance.py:1431} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=cso_2295_ipo_2_cso.py
+AIRFLOW_CTX_TASK_ID=check_system_source2
+AIRFLOW_CTX_EXECUTION_DATE=2022-04-25T12:28:07.845997+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-04-25T12:28:07.845997+00:00
+[2022-04-25 12:29:25,210] {python.py:175} INFO - Done. Returned value was: check_system_target2
+[2022-04-25 12:29:25,210] {skipmixin.py:140} INFO - Following branch check_system_target2
+[2022-04-25 12:29:25,210] {skipmixin.py:171} INFO - Skipping tasks ['log_err_access_source2']
+[2022-04-25 12:29:25,241] {taskinstance.py:1282} INFO - Marking task as SUCCESS. dag_id=cso_2295_ipo_2_cso.py, task_id=check_system_source2, execution_date=20220425T122807, start_date=20220425T122925, end_date=20220425T122925
+[2022-04-25 12:29:25,291] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-04-25 12:29:25,363] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check

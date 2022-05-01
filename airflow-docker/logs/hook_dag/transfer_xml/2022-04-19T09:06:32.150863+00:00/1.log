@@ -1,0 +1,22 @@
+[2022-04-19 09:06:35,574] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: hook_dag.transfer_xml manual__2022-04-19T09:06:32.150863+00:00 [queued]>
+[2022-04-19 09:06:35,582] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: hook_dag.transfer_xml manual__2022-04-19T09:06:32.150863+00:00 [queued]>
+[2022-04-19 09:06:35,582] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-19 09:06:35,582] {taskinstance.py:1244} INFO - Starting attempt 1 of 2
+[2022-04-19 09:06:35,582] {taskinstance.py:1245} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-19 09:06:35,591] {taskinstance.py:1264} INFO - Executing <Task(Postgres2File): transfer_xml> on 2022-04-19 09:06:32.150863+00:00
+[2022-04-19 09:06:35,594] {standard_task_runner.py:52} INFO - Started process 696 to run task
+[2022-04-19 09:06:35,600] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'hook_dag', 'transfer_xml', 'manual__2022-04-19T09:06:32.150863+00:00', '--job-id', '145', '--raw', '--subdir', 'DAGS_FOLDER/hook_dag.py', '--cfg-path', '/tmp/tmprteww6sd', '--error-file', '/tmp/tmpem7je6ak']
+[2022-04-19 09:06:35,600] {standard_task_runner.py:77} INFO - Job 145: Subtask transfer_xml
+[2022-04-19 09:06:35,730] {logging_mixin.py:109} INFO - Running <TaskInstance: hook_dag.transfer_xml manual__2022-04-19T09:06:32.150863+00:00 [running]> on host 22e04adb6bfa
+[2022-04-19 09:06:35,789] {taskinstance.py:1431} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=hook_dag
+AIRFLOW_CTX_TASK_ID=transfer_xml
+AIRFLOW_CTX_EXECUTION_DATE=2022-04-19T09:06:32.150863+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-04-19T09:06:32.150863+00:00
+[2022-04-19 09:06:35,795] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2022-04-19 09:06:35,844] {taskinstance.py:1282} INFO - Marking task as SUCCESS. dag_id=hook_dag, task_id=transfer_xml, execution_date=20220419T090632, start_date=20220419T090635, end_date=20220419T090635
+[2022-04-19 09:06:35,865] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-04-19 09:06:35,889] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check

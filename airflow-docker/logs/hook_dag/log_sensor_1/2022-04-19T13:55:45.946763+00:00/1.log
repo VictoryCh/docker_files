@@ -1,0 +1,30 @@
+[2022-04-19 13:55:49,682] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: hook_dag.log_sensor_1 manual__2022-04-19T13:55:45.946763+00:00 [queued]>
+[2022-04-19 13:55:49,698] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: hook_dag.log_sensor_1 manual__2022-04-19T13:55:45.946763+00:00 [queued]>
+[2022-04-19 13:55:49,698] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-19 13:55:49,698] {taskinstance.py:1244} INFO - Starting attempt 1 of 2
+[2022-04-19 13:55:49,698] {taskinstance.py:1245} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-19 13:55:49,713] {taskinstance.py:1264} INFO - Executing <Task(SqlSensor): log_sensor_1> on 2022-04-19 13:55:45.946763+00:00
+[2022-04-19 13:55:49,717] {standard_task_runner.py:52} INFO - Started process 15241 to run task
+[2022-04-19 13:55:49,722] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'hook_dag', 'log_sensor_1', 'manual__2022-04-19T13:55:45.946763+00:00', '--job-id', '428', '--raw', '--subdir', 'DAGS_FOLDER/hook_dag.py', '--cfg-path', '/tmp/tmpr304qe_o', '--error-file', '/tmp/tmp5ix63rs4']
+[2022-04-19 13:55:49,723] {standard_task_runner.py:77} INFO - Job 428: Subtask log_sensor_1
+[2022-04-19 13:55:49,780] {logging_mixin.py:109} INFO - Running <TaskInstance: hook_dag.log_sensor_1 manual__2022-04-19T13:55:45.946763+00:00 [running]> on host 22e04adb6bfa
+[2022-04-19 13:55:49,856] {taskinstance.py:1431} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=hook_dag
+AIRFLOW_CTX_TASK_ID=log_sensor_1
+AIRFLOW_CTX_EXECUTION_DATE=2022-04-19T13:55:45.946763+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-04-19T13:55:45.946763+00:00
+[2022-04-19 13:55:49,862] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2022-04-19 13:55:49,916] {sql.py:98} INFO - Poking: select case when q = 'true' then 1 else 0 end as q from  (
+	select case when count(id)=0 then 'true' else 'false' end as q
+	from list_flow_log
+	where object_flow = 1 and status = 1
+) t1; (with parameters None)
+[2022-04-19 13:55:49,921] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2022-04-19 13:56:25,201] {local_task_job.py:212} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2022-04-19 13:56:25,204] {process_utils.py:124} INFO - Sending Signals.SIGTERM to group 15241. PIDs of all processes in the group: [15241]
+[2022-04-19 13:56:25,204] {process_utils.py:75} INFO - Sending the signal Signals.SIGTERM to group 15241
+[2022-04-19 13:56:25,204] {taskinstance.py:1413} ERROR - Received SIGTERM. Terminating subprocesses.
+[2022-04-19 13:56:25,257] {process_utils.py:70} INFO - Process psutil.Process(pid=15241, status='terminated', exitcode=0, started='13:55:49') (15241) terminated with exit code 0

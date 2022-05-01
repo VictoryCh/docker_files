@@ -1,0 +1,26 @@
+[2022-04-25 08:47:00,343] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: cso_2295_ipo_2_cso_xls.py.sleep2 manual__2022-04-25T08:46:57.683080+00:00 [queued]>
+[2022-04-25 08:47:00,352] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: cso_2295_ipo_2_cso_xls.py.sleep2 manual__2022-04-25T08:46:57.683080+00:00 [queued]>
+[2022-04-25 08:47:00,352] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-25 08:47:00,352] {taskinstance.py:1244} INFO - Starting attempt 1 of 1
+[2022-04-25 08:47:00,352] {taskinstance.py:1245} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-25 08:47:00,376] {taskinstance.py:1264} INFO - Executing <Task(BashOperator): sleep2> on 2022-04-25 08:46:57.683080+00:00
+[2022-04-25 08:47:00,380] {standard_task_runner.py:52} INFO - Started process 2541 to run task
+[2022-04-25 08:47:00,382] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'cso_2295_ipo_2_cso_xls.py', 'sleep2', 'manual__2022-04-25T08:46:57.683080+00:00', '--job-id', '1186', '--raw', '--subdir', 'DAGS_FOLDER/cso_2295/cso_2295_ipo_2_cso_xls.py', '--cfg-path', '/tmp/tmpm0u70s0h', '--error-file', '/tmp/tmpo81ciwvm']
+[2022-04-25 08:47:00,383] {standard_task_runner.py:77} INFO - Job 1186: Subtask sleep2
+[2022-04-25 08:47:00,440] {logging_mixin.py:109} INFO - Running <TaskInstance: cso_2295_ipo_2_cso_xls.py.sleep2 manual__2022-04-25T08:46:57.683080+00:00 [running]> on host 22e04adb6bfa
+[2022-04-25 08:47:00,486] {taskinstance.py:1431} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=cso_2295_ipo_2_cso_xls.py
+AIRFLOW_CTX_TASK_ID=sleep2
+AIRFLOW_CTX_EXECUTION_DATE=2022-04-25T08:46:57.683080+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-04-25T08:46:57.683080+00:00
+[2022-04-25 08:47:00,486] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-04-25 08:47:00,487] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'sleep 10']
+[2022-04-25 08:47:00,495] {subprocess.py:85} INFO - Output:
+[2022-04-25 08:47:10,497] {subprocess.py:93} INFO - Command exited with return code 0
+[2022-04-25 08:47:10,515] {taskinstance.py:1282} INFO - Marking task as SUCCESS. dag_id=cso_2295_ipo_2_cso_xls.py, task_id=sleep2, execution_date=20220425T084657, start_date=20220425T084700, end_date=20220425T084710
+[2022-04-25 08:47:10,570] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-04-25 08:47:10,602] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check

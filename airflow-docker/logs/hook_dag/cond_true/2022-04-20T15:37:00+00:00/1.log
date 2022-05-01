@@ -1,0 +1,24 @@
+[2022-04-20 15:41:01,091] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: hook_dag.cond_true scheduled__2022-04-20T15:37:00+00:00 [queued]>
+[2022-04-20 15:41:01,104] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: hook_dag.cond_true scheduled__2022-04-20T15:37:00+00:00 [queued]>
+[2022-04-20 15:41:01,104] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-20 15:41:01,105] {taskinstance.py:1244} INFO - Starting attempt 1 of 2
+[2022-04-20 15:41:01,105] {taskinstance.py:1245} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-20 15:41:01,117] {taskinstance.py:1264} INFO - Executing <Task(ShortCircuitOperator): cond_true> on 2022-04-20 15:37:00+00:00
+[2022-04-20 15:41:01,122] {standard_task_runner.py:52} INFO - Started process 22915 to run task
+[2022-04-20 15:41:01,127] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'hook_dag', 'cond_true', 'scheduled__2022-04-20T15:37:00+00:00', '--job-id', '784', '--raw', '--subdir', 'DAGS_FOLDER/hook_dag.py', '--cfg-path', '/tmp/tmpr5iod0pf', '--error-file', '/tmp/tmpcatrvi0r']
+[2022-04-20 15:41:01,128] {standard_task_runner.py:77} INFO - Job 784: Subtask cond_true
+[2022-04-20 15:41:01,183] {logging_mixin.py:109} INFO - Running <TaskInstance: hook_dag.cond_true scheduled__2022-04-20T15:37:00+00:00 [running]> on host 22e04adb6bfa
+[2022-04-20 15:41:01,250] {taskinstance.py:1431} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=hook_dag
+AIRFLOW_CTX_TASK_ID=cond_true
+AIRFLOW_CTX_EXECUTION_DATE=2022-04-20T15:37:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-04-20T15:37:00+00:00
+[2022-04-20 15:41:01,250] {python.py:175} INFO - Done. Returned value was: True
+[2022-04-20 15:41:01,250] {python.py:239} INFO - Condition result is True
+[2022-04-20 15:41:01,250] {python.py:242} INFO - Proceeding with downstream tasks...
+[2022-04-20 15:41:01,269] {taskinstance.py:1282} INFO - Marking task as SUCCESS. dag_id=hook_dag, task_id=cond_true, execution_date=20220420T153700, start_date=20220420T154101, end_date=20220420T154101
+[2022-04-20 15:41:01,301] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-04-20 15:41:01,344] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check

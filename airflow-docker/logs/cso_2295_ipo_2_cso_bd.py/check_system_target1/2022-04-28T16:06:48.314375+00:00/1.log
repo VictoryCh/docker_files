@@ -1,0 +1,24 @@
+[2022-04-28 16:06:57,446] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: cso_2295_ipo_2_cso_bd.py.check_system_target1 manual__2022-04-28T16:06:48.314375+00:00 [queued]>
+[2022-04-28 16:06:57,457] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: cso_2295_ipo_2_cso_bd.py.check_system_target1 manual__2022-04-28T16:06:48.314375+00:00 [queued]>
+[2022-04-28 16:06:57,457] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-28 16:06:57,457] {taskinstance.py:1244} INFO - Starting attempt 1 of 1
+[2022-04-28 16:06:57,457] {taskinstance.py:1245} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-28 16:06:57,466] {taskinstance.py:1264} INFO - Executing <Task(BranchPythonOperator): check_system_target1> on 2022-04-28 16:06:48.314375+00:00
+[2022-04-28 16:06:57,473] {standard_task_runner.py:52} INFO - Started process 22664 to run task
+[2022-04-28 16:06:57,476] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'cso_2295_ipo_2_cso_bd.py', 'check_system_target1', 'manual__2022-04-28T16:06:48.314375+00:00', '--job-id', '1427', '--raw', '--subdir', 'DAGS_FOLDER/cso_2295/cso_2295_ipo_2_cso_bd.py', '--cfg-path', '/tmp/tmpup0zsyrj', '--error-file', '/tmp/tmpb68l2uu7']
+[2022-04-28 16:06:57,476] {standard_task_runner.py:77} INFO - Job 1427: Subtask check_system_target1
+[2022-04-28 16:06:57,578] {logging_mixin.py:109} INFO - Running <TaskInstance: cso_2295_ipo_2_cso_bd.py.check_system_target1 manual__2022-04-28T16:06:48.314375+00:00 [running]> on host 0936e4a14e76
+[2022-04-28 16:06:57,633] {taskinstance.py:1431} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=cso_2295_ipo_2_cso_bd.py
+AIRFLOW_CTX_TASK_ID=check_system_target1
+AIRFLOW_CTX_EXECUTION_DATE=2022-04-28T16:06:48.314375+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-04-28T16:06:48.314375+00:00
+[2022-04-28 16:06:57,633] {python.py:175} INFO - Done. Returned value was: transfer_cso_org
+[2022-04-28 16:06:57,634] {skipmixin.py:140} INFO - Following branch transfer_cso_org
+[2022-04-28 16:06:57,634] {skipmixin.py:171} INFO - Skipping tasks ['log_err_access_target1']
+[2022-04-28 16:06:57,695] {taskinstance.py:1282} INFO - Marking task as SUCCESS. dag_id=cso_2295_ipo_2_cso_bd.py, task_id=check_system_target1, execution_date=20220428T160648, start_date=20220428T160657, end_date=20220428T160657
+[2022-04-28 16:06:57,753] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-04-28 16:06:57,781] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check

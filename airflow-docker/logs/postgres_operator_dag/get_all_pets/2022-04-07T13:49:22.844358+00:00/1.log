@@ -1,0 +1,24 @@
+[2022-04-07 13:49:25,890] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: postgres_operator_dag.get_all_pets manual__2022-04-07T13:49:22.844358+00:00 [queued]>
+[2022-04-07 13:49:25,897] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: postgres_operator_dag.get_all_pets manual__2022-04-07T13:49:22.844358+00:00 [queued]>
+[2022-04-07 13:49:25,897] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-07 13:49:25,897] {taskinstance.py:1244} INFO - Starting attempt 1 of 1
+[2022-04-07 13:49:25,897] {taskinstance.py:1245} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-07 13:49:25,904] {taskinstance.py:1264} INFO - Executing <Task(PostgresOperator): get_all_pets> on 2022-04-07 13:49:22.844358+00:00
+[2022-04-07 13:49:25,909] {standard_task_runner.py:52} INFO - Started process 1677 to run task
+[2022-04-07 13:49:25,911] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'postgres_operator_dag', 'get_all_pets', 'manual__2022-04-07T13:49:22.844358+00:00', '--job-id', '86', '--raw', '--subdir', 'DAGS_FOLDER/example_postgres.py', '--cfg-path', '/tmp/tmp0sbbuqj_', '--error-file', '/tmp/tmpftppbcez']
+[2022-04-07 13:49:25,912] {standard_task_runner.py:77} INFO - Job 86: Subtask get_all_pets
+[2022-04-07 13:49:25,949] {logging_mixin.py:109} INFO - Running <TaskInstance: postgres_operator_dag.get_all_pets manual__2022-04-07T13:49:22.844358+00:00 [running]> on host d73239f69a26
+[2022-04-07 13:49:25,986] {taskinstance.py:1431} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=postgres_operator_dag
+AIRFLOW_CTX_TASK_ID=get_all_pets
+AIRFLOW_CTX_EXECUTION_DATE=2022-04-07T13:49:22.844358+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-04-07T13:49:22.844358+00:00
+[2022-04-07 13:49:25,992] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2022-04-07 13:49:25,995] {dbapi.py:225} INFO - Running statement: SELECT * FROM pet;, parameters: None
+[2022-04-07 13:49:25,995] {dbapi.py:233} INFO - Rows affected: 12
+[2022-04-07 13:49:26,003] {taskinstance.py:1282} INFO - Marking task as SUCCESS. dag_id=postgres_operator_dag, task_id=get_all_pets, execution_date=20220407T134922, start_date=20220407T134925, end_date=20220407T134926
+[2022-04-07 13:49:26,043] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-04-07 13:49:26,065] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check

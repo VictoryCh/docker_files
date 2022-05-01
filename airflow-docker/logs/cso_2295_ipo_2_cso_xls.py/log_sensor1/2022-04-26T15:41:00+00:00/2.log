@@ -1,0 +1,2 @@
+[2022-04-28 08:23:12,226] {taskinstance.py:1031} INFO - Dependencies not met for <TaskInstance: cso_2295_ipo_2_cso_xls.py.log_sensor1 scheduled__2022-04-26T15:41:00+00:00 [failed]>, dependency 'Task Instance State' FAILED: Task is in the 'failed' state.
+[2022-04-28 08:23:12,254] {local_task_job.py:99} INFO - Task is not able to be run

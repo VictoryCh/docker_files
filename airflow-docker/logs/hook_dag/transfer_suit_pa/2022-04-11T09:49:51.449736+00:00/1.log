@@ -1,0 +1,28 @@
+[2022-04-11 09:49:56,207] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: hook_dag.transfer_suit_pa manual__2022-04-11T09:49:51.449736+00:00 [queued]>
+[2022-04-11 09:49:56,216] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: hook_dag.transfer_suit_pa manual__2022-04-11T09:49:51.449736+00:00 [queued]>
+[2022-04-11 09:49:56,216] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-11 09:49:56,216] {taskinstance.py:1244} INFO - Starting attempt 1 of 2
+[2022-04-11 09:49:56,216] {taskinstance.py:1245} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-11 09:49:56,232] {taskinstance.py:1264} INFO - Executing <Task(Postgres2File): transfer_suit_pa> on 2022-04-11 09:49:51.449736+00:00
+[2022-04-11 09:49:56,236] {standard_task_runner.py:52} INFO - Started process 1894 to run task
+[2022-04-11 09:49:56,238] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'hook_dag', 'transfer_suit_pa', 'manual__2022-04-11T09:49:51.449736+00:00', '--job-id', '61', '--raw', '--subdir', 'DAGS_FOLDER/hook_dag.py', '--cfg-path', '/tmp/tmpi9fukjyt', '--error-file', '/tmp/tmp77ug4isg']
+[2022-04-11 09:49:56,239] {standard_task_runner.py:77} INFO - Job 61: Subtask transfer_suit_pa
+[2022-04-11 09:49:56,292] {logging_mixin.py:109} INFO - Running <TaskInstance: hook_dag.transfer_suit_pa manual__2022-04-11T09:49:51.449736+00:00 [running]> on host b69b085ebecc
+[2022-04-11 09:49:56,331] {taskinstance.py:1431} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=hook_dag
+AIRFLOW_CTX_TASK_ID=transfer_suit_pa
+AIRFLOW_CTX_EXECUTION_DATE=2022-04-11T09:49:51.449736+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-04-11T09:49:51.449736+00:00
+[2022-04-11 09:49:56,337] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2022-04-11 09:49:56,399] {warnings.py:110} WARNING - /opt/***/plugins/Postgres2File.py:63: FutureWarning: Use of **kwargs is deprecated, use engine_kwargs instead.
+  datatoexcel = pd.ExcelWriter(dir_file, header=self.headings, encoding=self.encoding)
+
+[2022-04-11 09:49:56,400] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/models/taskinstance.py:1516: FutureWarning: As the xlwt package is no longer maintained, the xlwt engine will be removed in a future version of pandas. This is the only engine in pandas that supports writing in the xls format. Install openpyxl and write to an xlsx file instead. You can set the option io.excel.xls.writer to 'xlwt' to silence this warning. While this option is deprecated and will also raise a warning, it can be globally set and the warning suppressed.
+  result = execute_callable(context=context)
+
+[2022-04-11 09:49:56,492] {taskinstance.py:1282} INFO - Marking task as SUCCESS. dag_id=hook_dag, task_id=transfer_suit_pa, execution_date=20220411T094951, start_date=20220411T094956, end_date=20220411T094956
+[2022-04-11 09:49:56,531] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-04-11 09:49:56,561] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,29 @@
+[2022-04-19 10:22:21,664] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: hook_dag.log_sensor manual__2022-04-19T10:22:20.481540+00:00 [queued]>
+[2022-04-19 10:22:21,671] {taskinstance.py:1037} INFO - Dependencies all met for <TaskInstance: hook_dag.log_sensor manual__2022-04-19T10:22:20.481540+00:00 [queued]>
+[2022-04-19 10:22:21,671] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-19 10:22:21,671] {taskinstance.py:1244} INFO - Starting attempt 1 of 2
+[2022-04-19 10:22:21,671] {taskinstance.py:1245} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-19 10:22:21,678] {taskinstance.py:1264} INFO - Executing <Task(SqlSensor): log_sensor> on 2022-04-19 10:22:20.481540+00:00
+[2022-04-19 10:22:21,682] {standard_task_runner.py:52} INFO - Started process 4569 to run task
+[2022-04-19 10:22:21,685] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'hook_dag', 'log_sensor', 'manual__2022-04-19T10:22:20.481540+00:00', '--job-id', '238', '--raw', '--subdir', 'DAGS_FOLDER/hook_dag.py', '--cfg-path', '/tmp/tmpjn2cz91c', '--error-file', '/tmp/tmpnqux5b27']
+[2022-04-19 10:22:21,686] {standard_task_runner.py:77} INFO - Job 238: Subtask log_sensor
+[2022-04-19 10:22:21,727] {logging_mixin.py:109} INFO - Running <TaskInstance: hook_dag.log_sensor manual__2022-04-19T10:22:20.481540+00:00 [running]> on host 22e04adb6bfa
+[2022-04-19 10:22:21,762] {taskinstance.py:1431} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=hook_dag
+AIRFLOW_CTX_TASK_ID=log_sensor
+AIRFLOW_CTX_EXECUTION_DATE=2022-04-19T10:22:20.481540+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-04-19T10:22:20.481540+00:00
+[2022-04-19 10:22:21,768] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2022-04-19 10:22:21,812] {sql.py:98} INFO - Poking: select case when q = 'true' then 1 else 0 end as q from  (
+	select case when count(id)=0 then 'true' else 'false' end as q
+	from list_flow_log
+	where object_flow = 1 and status = 1
+) t1; (with parameters None)
+[2022-04-19 10:22:21,817] {base.py:79} INFO - Using connection to: id: postgres_default. Host: postgres, Port: 5432, Schema: ***, Login: ***, Password: ***, extra: {}
+[2022-04-19 10:22:21,820] {base.py:251} INFO - Success criteria met. Exiting.
+[2022-04-19 10:22:21,828] {taskinstance.py:1282} INFO - Marking task as SUCCESS. dag_id=hook_dag, task_id=log_sensor, execution_date=20220419T102220, start_date=20220419T102221, end_date=20220419T102221
+[2022-04-19 10:22:21,857] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-04-19 10:22:21,888] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check
